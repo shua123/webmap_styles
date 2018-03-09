@@ -226,25 +226,25 @@ global:
     #
     #label visibility
     icon_size:                      [[13, '14px'], [16, '18px'], [18, '19px']]
-    text_visible_continent:         true
+    text_visible_continent:         false
     text_visible_admin:             true
     text_visible_populated_places:  true
-    icon_visible_populated_places:  true
-    text_visible_neighbourhoods:    true
-    text_visible_neighbourhoods_e:  true
-    text_visible_building:          true                        # false for default
-    text_visible_address:           true                        # false for default
-    text_visible_water_labels:      true
-    text_visible_island:            true
-    label_visible_landuse_green:    true                        #this needs work
-    icon_visible_landuse_green:     true                        #this needs work
-    text_visible_landuse_green:     true
+    icon_visible_populated_places:  false
+    text_visible_neighbourhoods:    false
+    text_visible_neighbourhoods_e:  false
+    text_visible_building:          false                       # false for default
+    text_visible_address:           false                       # false for default
+    text_visible_water_labels:      false
+    text_visible_island:            false
+    label_visible_landuse_green:    false                        #this needs work
+    icon_visible_landuse_green:     false                        #this needs work
+    text_visible_landuse_green:     false
     icon_size_green:                [[13, '14px'], [16, '18px'], [18, '19px']]      # 0px for no, default, more  [[13, '14px'], [16, '18px'], [18, '19px']]
     icon_size_green_l:              [[14, '24px'], [16, '32px']]                    # 0px for no, default, more  [[14, '24px'], [16, '32px']]
-    label_visible_poi_landuse:      true                        #false on default
-    icon_visible_poi_landuse:       true                        #false on default
-    text_visible_poi_landuse:       true
-    icon_visible_poi_landuse_e:     true                        #false on default
+    label_visible_poi_landuse:      false                        #false on default
+    icon_visible_poi_landuse:       false                        #false on default
+    text_visible_poi_landuse:       false
+    icon_visible_poi_landuse_e:     false                        #false on default
     text_visible_landuse_generic:   true                        # false for default
     label_visible_station:          true
     icon_visible_station:           true                        #false on default, this needs work
@@ -261,7 +261,7 @@ global:
     text_visible_aerialway:         true
     sdk_road_shields:               true
     text_visible_exits:             true
-    text_visible_airport_gate:      true
+    text_visible_airport_gate:      false
 
     #roads
     highway1:                   [1.00,1.00,1.00]
@@ -420,7 +420,7 @@ global:
 
 textures:
     pois:
-        url: images/refill@2x.png
+        #url: images/refill@2x.png
         filtering: mipmap
         sprites:
             # define sprites: [x origin, y origin, width, height]
@@ -709,7 +709,7 @@ sources:
     fpdcc_parking_lots:
         type: GeoJSON
         url: https://raw.githubusercontent.com/fpdcc/webmap_data_updates/master/basemap/FPCC-basemap-parking-icons.geojson
-    fpdcc:
+    #fpdcc:
         type: GeoJSON
         url: https://raw.githubusercontent.com/fpdcc/webmap_data_updates/master/map%20data/geojson/FPCC_boundary.geojson
         
@@ -1006,7 +1006,7 @@ styles:
                     color.rgb = vec3(random(abs(floor(pos)))+0.950);
                     color.rgb *= u_tint;
 
-    waves:
+    #waves:
         base: polygons
         mix: [space-constant, patterns-stripes]
         shaders:
@@ -1029,7 +1029,7 @@ styles:
                     color.rgb = mix(u_lighter, color.rgb, gl_FragCoord.x / u_resolution.x);
                     color = mix(color,vec4(u_lightest,1.0),stripes(st*92.,.5))*1.0;
 
-    coast:
+    #coast:
         base: lines
         mix: [space-constant]
         blend: overlay
@@ -1281,7 +1281,8 @@ layers:
         draw:
             points:
                 order: 1
-                color: [0.039, 0.004, 0.435, 1.00]
+                url: /home/garret/projects/webmap/server/tangram_styles/fpdcc_parking.png
+                #color: [0.039, 0.004, 0.435, 1.00]
     fpdcc_boundaries:
         data: {source: fpdcc}
         draw:
@@ -1561,13 +1562,13 @@ layers:
     water:
         data: { source: mapzen, layer: water }
         draw:
-            waves:
+            #waves:
                 order: global.feature_order
                 color: [0.584, 0.898, 0.976, 1.00] # colors the wave lines
         later:
             filter: { $zoom: { min: 12 } }
             draw:
-                waves:
+                #waves:
                     color: [0.584, 0.898, 0.976, 1.00] # colors the wave lines
                     order: function() { return feature.sort_rank + 1; }
 
@@ -1594,13 +1595,13 @@ layers:
                     - { $zoom: { min: 14 }, area: { min: 2000 } }
                     - { $zoom: { min: 15 } }
             draw:
-                waves:
+                #waves:
                     color: [0.584, 0.898, 0.976, 1.00]
 
         other-water-areas:
             filter: { not: { kind: [ocean, lake, water, reservoir, playa] }, $zoom: { min: 11 }, area: { min: 100 } }
             draw:
-                waves:
+                #waves:
                     color: [0.584, 0.898, 0.976, 1.00]
         playas:
             filter: { kind: playa }
@@ -1651,7 +1652,7 @@ layers:
             #river center lines, not boundaries for polygons
             filter: { kind: [river,canal,stream,dam,ditch,drain], $zoom: { min: 14 }, not: { is_tunnel: true } }
             draw:
-                waves:
+                #waves:
                     order: global.feature_order
                     color: [0.584, 0.898, 0.976, 1.00]
                     width: [[14, 0.5px], [15, 2px], [17, 6px],[ 18, 8px]]
@@ -2522,8 +2523,8 @@ layers:
                     - kind: [path, portage_way]
                 not:
                     - kind_detail: [steps, track, pier]
-                not:
                     - operator: 'Forest Preserve District of Cook County'
+                    - landuse_kind: [golf_course]
             draw:
                 lines:
                     color: [[14, global.light_color], [16, global.white_color]]
@@ -3336,7 +3337,7 @@ layers:
                         width: [[14,0px],[15,0.5px],[16,0.75px],[17,1px],[18,1px]]
 
     buildings:
-        data: { source: mapzen, layer: buildings }
+        #data: { source: mapzen, layer: buildings }
         filter:
             not: { location: underground }
        # set default footprint and extrusion draw properties, but don't draw by default (rules below will turn visibility on)
@@ -3366,9 +3367,9 @@ layers:
                     - { $zoom: { min: 17 }, area: true }
             draw:
                 polygons:
-                    visible: true
+                    visible: false
                 lines:
-                    visible: true
+                    visible: false
 
             # 3d buildings
             extrude:
@@ -3389,13 +3390,13 @@ layers:
                             - layer: [-1, -2, -3, -4, -5]
                 draw:
                     polygons:
-                        visible: true
+                        visible: false
                         order: 438
                         style: building-grid
                         extrude: global.building_extrude_height
                         # color: global.white_color
                     lines:
-                        visible: true
+                        visible: false
                         order: 439
                         style: building-lines
                         extrude: global.building_extrude_height
