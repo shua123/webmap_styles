@@ -1562,13 +1562,13 @@ layers:
     water:
         data: { source: mapzen, layer: water }
         draw:
-            #waves:
+            waves:
                 order: global.feature_order
                 color: [0.584, 0.898, 0.976, 1.00] # colors the wave lines
         later:
             filter: { $zoom: { min: 12 } }
             draw:
-                #waves:
+                wave:
                     color: [0.584, 0.898, 0.976, 1.00] # colors the wave lines
                     order: function() { return feature.sort_rank + 1; }
 
@@ -3337,7 +3337,7 @@ layers:
                         width: [[14,0px],[15,0.5px],[16,0.75px],[17,1px],[18,1px]]
 
     buildings:
-        #data: { source: mapzen, layer: buildings }
+        data: { source: mapzen, layer: buildings }
         filter:
             not: { location: underground }
        # set default footprint and extrusion draw properties, but don't draw by default (rules below will turn visibility on)
@@ -5275,9 +5275,12 @@ layers:
             # effectively wilderness
         conservation:
             filter:
-                $zoom: { min: 4 }
-                kind: [protected_area, nature_reserve, national_park]
-                not: { protect_class: ['2','3','5']}
+                all:
+                    - $zoom: { min: 4 }
+                    - kind: [protected_area, nature_reserve, national_park]
+                any:
+                    - not: { protect_class: ['2','3','5']}
+                    - not: { operator: { "Forest Preserve District of Cook County" } }
             draw:
                 pixel-pattern-light:
                     color: global.white_color
@@ -5296,7 +5299,12 @@ layers:
                     visible: true
 
         forest-landcover:
-            filter: { kind: [forest, natural_forest, wood, natural_wood, natural_park], $zoom: { min: 10 }, not: { operator: "United States Forest Service" } }
+            filter:
+                all:
+                    - kind: [forest, natural_forest, wood, natural_wood, natural_park]
+                    - $zoom: { min: 10 }
+                any:
+                    - not: { operator: [ "United States Forest Service", "Forest Preserve District of Cook County" ] }
             draw:
                 pixel-pattern-light:
                         visible: true
