@@ -420,7 +420,7 @@ global:
 
 textures:
     pois:
-        #url: images/refill@2x.png
+        url: images/refill@2x.png
         filtering: mipmap
         sprites:
             # define sprites: [x origin, y origin, width, height]
@@ -716,10 +716,10 @@ sources:
     mapzen:
         type: MVT
         url: https://tile.nextzen.org/tilezen/vector/v1/all/{z}/{x}/{y}.mvt?api_key=mbsddWddR263J5Ev_c3ecg
-        
+
         #url:  https://tile.dev.mapzen.com/mapzen/vector/v1/all/{z}/{x}/{y}.topojson
         # url:  //localhost:8080/vector/all/{z}/{x}/{y}.topojson
-        max_zoom: 16
+        #max_zoom: 16
 
 cameras:
     isometric:
@@ -1282,6 +1282,8 @@ layers:
             points:
                 order: 1
                 url: /home/garret/projects/webmap/server/tangram_styles/fpdcc_parking.png
+                sprites: [1, 1, 82, 82]
+                # define sprites: [x origin, y origin, width, height]
                 #color: [0.039, 0.004, 0.435, 1.00]
     fpdcc_boundaries:
         data: {source: fpdcc}
@@ -5254,13 +5256,14 @@ layers:
                 all:
                     - kind: [national_park, battlefield, protected_area]
                 any:
-                    - not: { operator: [ "United States Forest Service" ] }
+                    - not: { operator: [ "United States Forest Service", "Forest Preserve District of Cook County" ] }
                     - protect_class: ['2','3','5']
             draw:
                 dots:
                     color: global.lighter_color
                     order: 18
                     visible: true
+            
             us_national_park:
                 # yosemite national park, death valley national park, grand canyon national park
                 filter:
@@ -5279,7 +5282,7 @@ layers:
                     - $zoom: { min: 4 }
                     - kind: [protected_area, nature_reserve, national_park]
                 any:
-                    - not: { protect_class: ['2','3','5']}
+                    - protect_class: ['2','3','5']
                     - not: { operator: { "Forest Preserve District of Cook County" } }
             draw:
                 pixel-pattern-light:
@@ -5315,8 +5318,8 @@ layers:
                     - $zoom: { min: 4 }
                     - kind: [park, national_park]
                 any:
-                    - not: { operator: [ "United States National Park Service", "United States Forest Service" ] }
-                    - not: { protect_class: ['2','3','5','6'] }
+                    - not: { operator: [ "United States National Park Service", "United States Forest Service", "Forest Preserve District of Cook County" ] }
+                    - protect_class: ['2','3','5','6']
             # default for national forests and more?
             draw:
                 dots:
@@ -5327,7 +5330,9 @@ layers:
                 filter:
                     all:
                         - kind: national_park
-                        - not: [ protect_class: ['2','3','5','6'], operator: [ "United States National Park Service"] ]
+                    any:
+                        - protect_class: ['2','3','5','6']
+                        - not: { operator: [ "United States National Park Service", "Forest Preserve District of Cook County" ] }
                 draw:
                     pixel-pattern-light:
                         visible: true
