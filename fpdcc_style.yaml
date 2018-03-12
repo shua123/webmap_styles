@@ -1564,13 +1564,13 @@ layers:
     water:
         data: { source: mapzen, layer: water }
         draw:
-            waves:
+            polygons:
                 order: global.feature_order
                 color: [0.584, 0.898, 0.976, 1.00] # colors the wave lines
         later:
             filter: { $zoom: { min: 12 } }
             draw:
-                wave:
+                polygons:
                     color: [0.584, 0.898, 0.976, 1.00] # colors the wave lines
                     order: function() { return feature.sort_rank + 1; }
 
@@ -1597,13 +1597,13 @@ layers:
                     - { $zoom: { min: 14 }, area: { min: 2000 } }
                     - { $zoom: { min: 15 } }
             draw:
-                #waves:
-                    color: [0.584, 0.898, 0.976, 1.00]
+                polygons:
+                    color: [0.584, 0.898, 0.976]
 
         other-water-areas:
             filter: { not: { kind: [ocean, lake, water, reservoir, playa] }, $zoom: { min: 11 }, area: { min: 100 } }
             draw:
-                #waves:
+                polygons:
                     color: [0.584, 0.898, 0.976, 1.00]
         playas:
             filter: { kind: playa }
@@ -1614,7 +1614,7 @@ layers:
         swimming_pool:
             filter: { kind: swimming_pool }
             draw:
-                waves:
+                polygons:
                     color: [0.584, 0.898, 0.976, 1.00]
         water-boundary-ocean:
             filter: { boundary: true, kind: ocean, $zoom: { min: 1 } }
@@ -1654,7 +1654,7 @@ layers:
             #river center lines, not boundaries for polygons
             filter: { kind: [river,canal,stream,dam,ditch,drain], $zoom: { min: 14 }, not: { is_tunnel: true } }
             draw:
-                #waves:
+                lines:
                     order: global.feature_order
                     color: [0.584, 0.898, 0.976, 1.00]
                     width: [[14, 0.5px], [15, 2px], [17, 6px],[ 18, 8px]]
