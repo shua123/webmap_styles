@@ -714,7 +714,9 @@ sources:
         url: https://raw.githubusercontent.com/fpdcc/webmap_data_updates/master/map%20data/geojson/FPCC_boundary.geojson
     mapzen:
         type: MVT
-        url: https://tile.nextzen.org/tilezen/vector/v1/all/{z}/{x}/{y}.mvt?api_key=mbsddWddR263J5Ev_c3ecg
+        url: https://tile.nextzen.org/tilezen/vector/v1/all/{z}/{x}/{y}.mvt
+        url_params:
+            api_key: mbsddWddR263J5Ev_c3ecg
 
         #url:  https://tile.dev.mapzen.com/mapzen/vector/v1/all/{z}/{x}/{y}.topojson
         # url:  //localhost:8080/vector/all/{z}/{x}/{y}.topojson
@@ -1237,7 +1239,7 @@ layers:
                 order: 1
                 #url: https://gist.github.com/glw/2c4e310cdf26f4b1714d7ba319c71eb8/raw/f0db4affb364ed9f0ed2df5809ea6ff2c81e515f/fpdcc_parking.png
                 # define sprites: [x origin, y origin, width, height]
-                color: [0.039, 0.004, 0.435, 1.00]
+                color: [0.039, 0.004, 0.435, 0.50]
     
     fpdcc_boundaries:
         data: {source: fpdcc}
@@ -1515,20 +1517,20 @@ layers:
                         fill: global.black_color
                         weight: normal
                         stroke: { color: global.white_color, width: 4 }
-    sater:
+    new_water:
         data: { source: mapzen, layer: water }
         draw:
             polygons:
                 order: global.feature_order
                 color: [0.584, 0.898, 0.976, 1.00] # colors the wave lines
-        Tater:
+        new_later:
             filter: { $zoom: { min: 12 } }
             draw:
                 polygons:
                     color: [0.059, 0.404, 0.710, 1.00] # colors the wave lines
                     order: global.feature_order
 
-        Takes:
+        new_lakes:
             filter:
                 all:
                     - kind: [ocean, lake, water, riverbank, reservoir, swimming_pool]
@@ -1601,14 +1603,14 @@ layers:
                 draw:
                     coast:
                         visible: false
-            siverbank:
+            new_riverbank:
                 # river boundaries like the thames in london, la seine in paris
                 filter: { kind: riverbank }
                 draw:
                     coast:
                         color: [0.137, 0.290, 0.569, 1.00]
                         width: [[9, 0.5px], [11, 1px], [14, 1px], [15, 2px]]
-        siver:
+        new_river:
             #river center lines, not boundaries for polygons
             filter: { kind: [river,canal,stream,dam,ditch,drain], $zoom: { min: 14 }, not: { is_tunnel: true } }
             draw:
