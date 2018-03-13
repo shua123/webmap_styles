@@ -1619,7 +1619,7 @@ layers:
                 lines:
                     order: global.feature_order
                     color: '#8BD1E3'
-                    width: [[14, 0px], [15, 0px], [17, 0px],[ 18, 0px]]
+                    width: [[14, 0.5px], [15, 2px], [17, 6px],[ 18, 8px]]
                     cap: round
 
         water-area-labels:
