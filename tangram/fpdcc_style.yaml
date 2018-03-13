@@ -2558,6 +2558,7 @@ layers:
             filter: { kind: path, kind_detail: track }
             draw:
                 lines:
+                    visible: false
                     color: [[13, global.white_color], [16, global.light_color], [17, global.white_color]]
                     width: [[13, 0px], [14, 0.15px], [16, 1px], [18, 1.5px], [20, 1m]]
                     outline:
