@@ -1523,6 +1523,7 @@ layers:
         data: { source: mapzen, layer: water }
         draw:
             polygons:
+                visible: true
                 order: global.sdk_order_under_roads_0
                 color: '#8BD1E3' # colors the wave lines
         new_later:
