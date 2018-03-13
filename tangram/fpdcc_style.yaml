@@ -263,6 +263,7 @@ global:
     sdk_road_shields:               true
     text_visible_exits:             true
     text_visible_airport_gate:      false
+    sdk_coastline:                  false
 
     #roads
     highway1:                   [1.00,1.00,1.00]
