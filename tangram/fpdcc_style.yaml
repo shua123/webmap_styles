@@ -2457,6 +2457,7 @@ layers:
             filter: { kind: minor_road, kind_detail: service, $zoom: { min: 13 } }
             draw:
                 lines:
+                    visible: false
                     color: [[13, global.offwhite_color], [15, global.midlight_color], [16, global.white_color]]
                     width: [[13, 0px], [15, 0.75px], [16, 0.1px], [17, 2.5px], [18, 5m]]
                     outline:
@@ -2467,7 +2468,7 @@ layers:
                 draw:
                     text-blend-order:
                         priority: 60
-                        visible: global.text_visible_service_road
+                        visible: false
                         text_source: name
                         font:
                             fill: [[17, global.dark_color], [18, global.black_color]]
@@ -2480,6 +2481,7 @@ layers:
                     - operator: 'Forest Preserve District of Cook County'
             draw:
                 lines:
+                    visible: false
                     color: [0.722, 0.004, 0.004, 0.00]
         path:
             filter:
@@ -2491,6 +2493,7 @@ layers:
                     - landuse_kind: [golf_course]
             draw:
                 lines:
+                    visible: false
                     color: [[14, global.light_color], [16, global.white_color]]
                     width: [[14, 0.35px], [15, 0px], [16, 0.25px], [18, 2px], [20, 1m]]
                     outline:
@@ -2545,7 +2548,7 @@ layers:
                 draw:
                     text-blend-order:
                         priority: 61
-                        visible: global.text_visible_path
+                        visible: false
                         text_source: name
                         font:
                             fill: global.dark_color
