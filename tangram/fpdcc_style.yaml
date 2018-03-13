@@ -1611,7 +1611,7 @@ layers:
                 draw:
                     coast:
                         color: '#8BD1E3'
-                        width: [[9, 0.5px], [11, 1px], [14, 1px], [15, 2px]]
+                        width: [[9, 0px], [11, 0px], [14, 0px], [15, 0px]]
         new_river:
             #river center lines, not boundaries for polygons
             filter: { kind: [river,canal,stream,dam,ditch,drain], $zoom: { min: 14 }, not: { is_tunnel: true } }
