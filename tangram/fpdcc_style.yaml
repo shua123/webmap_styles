@@ -1248,7 +1248,7 @@ layers:
         draw:
             polygons:
                 order: 180
-                color: [0.678, 0.820, 0.694, 1.00]
+                color: '#C4EDC7'
                 
     mz_route_line:
         data: { source: mz_route_line }
@@ -1524,12 +1524,12 @@ layers:
         draw:
             polygons:
                 order: global.feature_order
-                color: [0.584, 0.898, 0.976, 1.00] # colors the wave lines
+                color: '#8BD1E3' # colors the wave lines
         new_later:
             filter: { $zoom: { min: 12 } }
             draw:
                 polygons:
-                    color: [0.059, 0.404, 0.710, 1.00] # colors the wave lines
+                    color: '#8BD1E3' # colors the wave lines
                     order: global.feature_order
 
         new_lakes:
@@ -1556,7 +1556,7 @@ layers:
                     - { $zoom: { min: 15 } }
             draw:
                 polygons:
-                    color: red
+                    color: '#8BD1E3'
                     order: global.feature_order
             #draw:
              #   polygons:
@@ -1566,33 +1566,35 @@ layers:
             filter: { not: { kind: [ocean, lake, water, reservoir, playa] }, $zoom: { min: 11 }, area: { min: 100 } }
             draw:
                 polygons:
-                    color: [0.078, 0.180, 0.392, 1.00]
+                    color: '#8BD1E3'
         playas:
             filter: { kind: playa }
             draw:
                 polygons:
                     order: global.feature_order
-                    color: [0.584, 0.898, 0.976, 1.00]
+                    color: '#8BD1E3'
         swimming_pool:
             filter: { kind: swimming_pool }
             draw:
                 polygons:
-                    color: [0.584, 0.898, 0.976, 1.00]
+                    color: '#8BD1E3'
         water-boundary-ocean:
             filter: { boundary: true, kind: ocean, $zoom: { min: 1 } }
             draw:
                 coast:
-                    order: global.feature_order
-                    color: [0.584, 0.898, 0.976, 1.00]
-                    width: [[1, 1px], [20, 10px]]
+                    visible: false
+                    order: global.sdk_order_under_everything_0
+                    color: [0.584, 0.898, 0.976, 0]
+                    width: [[1, 0px], [20, 0px]]
                     join: round
         water_boundaries-not-ocean:
             filter: { boundary: true, not: { kind: ocean }, $zoom: { min: 8 } }
             draw:
                 coast:
-                    order: global.feature_order
-                    color: [0.584, 0.898, 0.976, 1.00]
-                    width: [[6, 0.75px], [10, 1px], [14, 2px], [16, 3px]]
+                    visible: false
+                    order: global.sdk_order_under_everything_0
+                    color: [0.584, 0.898, 0.976, 0]
+                    width: [[6, 0px], [10, 0px], [14, 0px], [16, 0px]]
                     join: round
             # do we still need this?
             # early:
@@ -1610,7 +1612,7 @@ layers:
                 filter: { kind: riverbank }
                 draw:
                     coast:
-                        color: [0.137, 0.290, 0.569, 1.00]
+                        color: '#8BD1E3'
                         width: [[9, 0.5px], [11, 1px], [14, 1px], [15, 2px]]
         new_river:
             #river center lines, not boundaries for polygons
@@ -1618,7 +1620,7 @@ layers:
             draw:
                 lines:
                     order: global.feature_order
-                    color: [0.059, 0.173, 0.380, 1.00]
+                    color: '#8BD1E3'
                     width: [[14, 0.5px], [15, 2px], [17, 6px],[ 18, 8px]]
                     cap: round
 
