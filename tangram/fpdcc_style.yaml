@@ -1523,14 +1523,14 @@ layers:
         data: { source: mapzen, layer: water }
         draw:
             polygons:
-                order: global.feature_order
+                order: global.sdk_order_under_roads_0
                 color: '#8BD1E3' # colors the wave lines
         new_later:
             filter: { $zoom: { min: 12 } }
             draw:
                 polygons:
                     color: '#8BD1E3' # colors the wave lines
-                    order: global.feature_order
+                    order: global.sdk_order_under_roads_0
 
         new_lakes:
             filter:
@@ -1582,18 +1582,16 @@ layers:
             filter: { boundary: true, kind: ocean, $zoom: { min: 1 } }
             draw:
                 coast:
-                    visible: false
-                    order: global.sdk_order_under_everything_0
-                    color: [0.584, 0.898, 0.976, 0]
+                    order: global.feature_order
+                    color: '#8BD1E3'
                     width: [[1, 0px], [20, 0px]]
                     join: round
         water_boundaries-not-ocean:
             filter: { boundary: true, not: { kind: ocean }, $zoom: { min: 8 } }
             draw:
                 coast:
-                    visible: false
-                    order: global.sdk_order_under_everything_0
-                    color: [0.584, 0.898, 0.976, 0]
+                    order: global.feature_order
+                    color: '#8BD1E3'
                     width: [[6, 0px], [10, 0px], [14, 0px], [16, 0px]]
                     join: round
             # do we still need this?
@@ -2510,6 +2508,7 @@ layers:
                 filter: { kind_detail: pedestrian }
                 draw:
                     lines:
+                        visible: false
                         color: [[14, global.light_color], [16, global.white_color]]
                         width: [[14, 0.35px], [15, 0px], [16, 0.25px], [18, 2px], [20, 1m]]
                         outline:
@@ -2519,6 +2518,7 @@ layers:
                 filter: { kind_detail: footway }
                 draw:
                     lines:
+                        visible: false
                         color: [[14, global.light_color], [16, global.white_color]]
                         width: [[14, 0.35px], [15, 0px], [16, 0.25px], [18, 2px], [20, 1m]]
                         outline:
