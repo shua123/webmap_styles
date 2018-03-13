@@ -708,15 +708,9 @@ textures:
         filtering: mipmap
 
 sources:
-    fpdcc_parking_icons:
+    fpdcc_parking_lots:
         type: GeoJSON
         url: https://raw.githubusercontent.com/fpdcc/webmap_data_updates/master/basemap/FPCC-basemap-parking-icons.geojson
-    fpdcc_parking_geometry:
-        type: GeoJSON
-        url: https://raw.githubusercontent.com/fpdcc/webmap_data_updates/master/basemap/FPCC-basemap-parking-geometry.geojson
-    fpdcc_np:    
-        type: GeoJSON
-        url: https://raw.githubusercontent.com/fpdcc/webmap_data_updates/master/basemap/FPCC-basemap-nature-preserves.geojson
     fpdcc:
         type: GeoJSON
         url: https://raw.githubusercontent.com/fpdcc/webmap_data_updates/master/map%20data/geojson/FPCC_boundary.geojson
@@ -1237,11 +1231,11 @@ fonts:
 
 scene:
     background:
-        color: '#F2F2F2'
+        color: global.white_color
 layers:
     # Map overlays for styling the server response (using special source layer names) for route line, current location, and search result pins
     fpdcc_parking_points:
-        data: {source: fpdcc_parking_icons}
+        data: {source: fpdcc_parking_lots}
         draw:
             points:
                 order: 1
@@ -1249,21 +1243,7 @@ layers:
                 # define sprites: [x origin, y origin, width, height]
                 color: [0.039, 0.004, 0.435, 0.50]
     
-    fpdcc_parking_lots:
-    data: {source: fpdcc_parking_geometry}
-        draw:
-            polygons:
-                order: 178
-                color: '#D9D9D9'
-   
-    fpdcc_nature_preserves:
-        data: {source: fpdcc_np}
-        draw:
-            polygons:
-                order: 179
-                color: '#92DC97'
-   
-   fpdcc_boundaries:
+    fpdcc_boundaries:
         data: {source: fpdcc}
         draw:
             polygons:
@@ -1631,7 +1611,7 @@ layers:
                 draw:
                     coast:
                         color: '#8BD1E3'
-                        width: [[9, 0px], [11, 0px], [14, 0px], [15, 0px]]
+                        width: [[9, 0.5px], [11, 1px], [14, 1px], [15, 2px]]
         new_river:
             #river center lines, not boundaries for polygons
             filter: { kind: [river,canal,stream,dam,ditch,drain], $zoom: { min: 14 }, not: { is_tunnel: true } }
