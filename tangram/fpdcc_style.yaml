@@ -4690,7 +4690,7 @@ layers:
                     size: global.icon_size_green
                     sprite: park
                     text:
-                        visible: global.text_visible_landuse_green
+                        visible: false
                         font:
                             fill: global.dark_color
                             style: italic
@@ -4711,7 +4711,7 @@ layers:
                     size: global.icon_size_green
                     sprite: park
                     text:
-                        visible: global.text_visible_landuse_green
+                        visible: false
                         font:
                             fill: global.dark_color
                             style: italic
@@ -4721,6 +4721,7 @@ layers:
                     colorized-icons:
                         size: 0px
                         text:
+                            visible: false
                             font:
                                 style: italic
         forest:
@@ -4733,7 +4734,7 @@ layers:
                     size: global.icon_size_green
                     sprite: forest
                     text:
-                        visible: global.text_visible_landuse_green
+                        visible: false
                         font:
                             fill: global.dark_color
                             style: italic
@@ -4745,7 +4746,7 @@ layers:
                     visible: global.icon_visible_landuse_green
                     size: global.icon_size_green
                     text:
-                        visible: global.text_visible_landuse_green
+                        visible: false
                         font:
                             fill: global.dark_color
         airport:
