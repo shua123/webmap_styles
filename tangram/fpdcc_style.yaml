@@ -711,9 +711,6 @@ sources:
     fpdcc_parking_lots:
         type: GeoJSON
         url: https://raw.githubusercontent.com/fpdcc/webmap_data_updates/master/basemap/FPCC-basemap-parking-icons.geojson
-    fpdcc_parking_bounds:
-        type: GeoJSON
-        url: https://raw.githubusercontent.com/fpdcc/webmap_data_updates/master/basemap/FPCC-basemap-parking-geometry.geojson
     fpdcc:
         type: GeoJSON
         url: https://raw.githubusercontent.com/fpdcc/webmap_data_updates/master/map%20data/geojson/FPCC_boundary.geojson
@@ -1209,7 +1206,7 @@ styles:
 
 scene:
     background:
-        color: global.white_color
+        color: '#F2F2F2'
 
 fonts:
     Open Sans:
@@ -1234,7 +1231,7 @@ fonts:
 
 scene:
     background:
-        color: global.white_color
+        color: '#F2F2F2'
 layers:
     # Map overlays for styling the server response (using special source layer names) for route line, current location, and search result pins
     fpdcc_parking_points:
@@ -1245,13 +1242,6 @@ layers:
                 #url: https://gist.github.com/glw/2c4e310cdf26f4b1714d7ba319c71eb8/raw/f0db4affb364ed9f0ed2df5809ea6ff2c81e515f/fpdcc_parking.png
                 # define sprites: [x origin, y origin, width, height]
                 color: [0.039, 0.004, 0.435, 0.50]
-    
-     fpdcc_parking_areas:
-        data: {source: fpdcc_parking_bounds}
-        draw:
-            polygons:
-                order: 179
-                color: '#D9D9D9'
     
     fpdcc_boundaries:
         data: {source: fpdcc}
