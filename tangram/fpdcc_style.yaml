@@ -5210,7 +5210,7 @@ layers:
                     interactive: global.sdk_interactive
                     move_into_tile: true
                     priority: 100
-                    visible: global.text_visible_landuse_generic
+                    visible: false
                     font:
                         fill: global.mid_color
                         family: global.text_font_family
@@ -5230,7 +5230,7 @@ layers:
                 dots:
                     color: global.lighter_color
                     order: 18
-                    visible: true
+                    visible: false
             
             us_national_park:
                 # yosemite national park, death valley national park, grand canyon national park
@@ -5240,7 +5240,7 @@ layers:
                         - protect_class: ['2','3','5']
                 draw:
                     pixel-pattern-light:
-                        visible: true
+                        visible: false
 
         #tier2:
             # effectively wilderness
@@ -5267,7 +5267,7 @@ layers:
             draw:
                 pixel-pattern-bright:
                     color: global.lighter_color
-                    visible: true
+                    visible: false
 
         forest-landcover:
             filter:
@@ -5278,7 +5278,7 @@ layers:
                     - not: { operator: [ "United States Forest Service", "Forest Preserve District of Cook County" ] }
             draw:
                 pixel-pattern-light:
-                        visible: true
+                        visible: false
 
         parks-and-national-forests-not-national-park:
             filter:
@@ -5292,7 +5292,7 @@ layers:
             draw:
                 dots:
                     color: global.lighter_color
-                    visible: true
+                    visible: false
             national_park:
                 #filter: function() { return feature.name && (feature.name.indexOf('National Park') > -1); }
                 filter:
@@ -5303,7 +5303,7 @@ layers:
                         - not: { operator: [ "United States National Park Service", "Forest Preserve District of Cook County" ] }
                 draw:
                     pixel-pattern-light:
-                        visible: true
+                        visible: false
 
         # gotta be a protected area to draw green, not just a landcover type
         farm:
@@ -5313,7 +5313,7 @@ layers:
             draw:
                 tiny-dots:
                     color: global.offwhite_color
-                    visible: true
+                    visible: false
 
         #tier3:
         university:
@@ -5322,7 +5322,7 @@ layers:
             draw:
                 dots-rev:
                     color: global.lightest_color
-                    visible: true
+                    visible: false
         #tier4:
         cemetery:
             filter:
@@ -5330,55 +5330,56 @@ layers:
             draw:
                 tiny-dots:
                     color: global.lighter_color
-                    visible: true
+                    visible: false
         golf_course:
             filter:
                 kind: golf_course
             draw:
                 medium-dots:
                     color: global.lighter_color
-                    visible: true
+                    visible: false
         hospital:
             filter:
                 kind: hospital
             draw:
                 medium-dots:
                     color: global.lightest_color
-                    visible: true
+                    visible: false
         sports_centre:
             filter:
                 kind: sports_centre
             draw:
                 dots-rev-grid:
                     color: global.offwhite_color
+                    visible: false
         recreation_ground:
             filter:
                 kind: recreation_ground
             draw:
                 dots-rev-grid:
                     color: global.offwhite_color
-                    visible: true
+                    visible: false
         stadium:
             filter:
                 kind: stadium
             draw:
                 dots-rev-grid:
                     color: global.offwhite_color
-                    visible: true
+                    visible: false
         zoo:
             filter:
                 kind: [zoo, wildlife_park]
             draw:
                 tiny-dots:
                     color: global.offwhite_color
-                    visible: true
+                    visible: false
         winter_sports:
             filter:
                 kind: winter_sports
             draw:
                 polygons:
                     color: [[9, global.white_color], [20, global.offwhite_color]]
-                    visible: true
+                    visible: false
         man-made:
             filter: { kind: [pier,wastewater_plant,works,bridge,tower,breakwater,water_works,groyne,dike,cutline] }
             draw:
@@ -5427,7 +5428,7 @@ layers:
             draw:
                 tiny-dots:
                     color: global.light_color
-                    visible: true
+                    visible: false
         parking:
             filter:
                 all:
@@ -5439,13 +5440,13 @@ layers:
             draw:
                 horizontal-bars-rev:
                     color: global.ultralight_color
-                    visible: true
+                    visible: false
             early:
                 filter: { $zoom: { max: 15 } }
                 draw:
                     horizontal-bars-rev:
                         color: global.offwhite_color
-                        visible: true
+                        visible: false
         pedestrian:
             filter:
                 kind: [pedestrian,common]
@@ -5459,12 +5460,13 @@ layers:
                 draw:
                     dots:
                         color: global.lighter_color
+                        visible: false
         pitch:
             filter: { kind: pitch }
             draw:
                 tiny-dots:
                     color: global.lightest_color
-                    visible: true
+                    visible: false
                 outline:
                     style: lines
                     order: global.feature_order
@@ -5476,14 +5478,14 @@ layers:
             draw:
                 dots-rev:
                     color: global.ultralight_color
-                    visible: true
+                    visible: false
         school:
             filter:
                 kind: school
             draw:
                 dots-rev:
                     color: global.offwhite_color
-                    visible: true
+                    visible: false
         minor-landuse:
             filter:
                 kind:
@@ -5494,7 +5496,7 @@ layers:
             draw:
                 dots:
                     color: global.light_color
-                    visible: true
+                    visible: false
 
         landuse-not-filtered:
             # runways and taxiways are also in the roads layer as lines
