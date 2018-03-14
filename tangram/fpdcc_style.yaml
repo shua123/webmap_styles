@@ -1247,7 +1247,7 @@ layers:
         draw:
             polygons:
                 order: 181
-                color: [0.565, 0.788, 0.580, 1.00]
+                color: '#92DC97'
     
     fpdcc_parking_geometry:
         data: {source: fpdcc_parking_geometry}
