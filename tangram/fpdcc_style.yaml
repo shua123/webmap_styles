@@ -1921,6 +1921,7 @@ layers:
                                 family: Montserrat
                                 fill: function() { if(feature.colour == 'yellow') { return '#555'; } else { return 'white'; } }
                                 style: bold
+                                stroke: { color: '#D6D6D6', width: 3px }
                                 size: [[7,7px],[12,8px],[16,11px]]
 
                 width_1char:
