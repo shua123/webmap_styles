@@ -2102,7 +2102,7 @@ layers:
                 draw:
                     lines:
                         color: [[9, '#FFF'], [13, '#FFF'], [14, '#FFF']]
-                        width: [[9, 0px], [13, 0.75px], [14, 0.1px], [17, 4px], [18, 5m]]
+                        width: [[9, 0px], [13, 0.75px], [17, 4px], [18, 5m]]
                         outline:
                             color: [[9, '#CCC'], [12, '#CCC'], [13, '#CCC'], [15, '#CCC']]
                             width: [[9, 0px], [13, 0px], [14, 0.4px], [17, 1.5px], [18, 2px]]
