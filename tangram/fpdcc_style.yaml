@@ -1783,20 +1783,20 @@ layers:
                 draw:
                     lines:
                         color: '#D6D6D6'
-                        width: [[11, 0.5px], [15, 4px], [17, 7.25px], [18, 9m]]
+                        width: [[11, 0.5px], [15, 4px], [17, 6px], [18, 7m]]
             subway:
                 filter: { kind: subway }
                 draw:
                     lines:
                         color: '#D6D6D6'
-                        width: [[11, 0.5px], [15, 4px], [17, 7.25px], [18, 9m]]
+                        width: [[11, 0.5px], [15, 4px], [17, 6px], [18, 7m]]
             light_rail:
                 filter: { kind: [light_rail,tram], $zoom: { min: 15 } }
                 draw:
                     lines:
                         order: 415
                         color: '#D6D6D6'
-                        width: [[11, 0.5px], [15, 4px], [17, 7.25px], [18, 9m]]
+                        width: [[11, 0.5px], [15, 4px], [17, 6px], [18, 7m]]
         transit-overlay-rail-lines:
             filter:
                 not: { kind: [platform, railway] }
@@ -1814,7 +1814,7 @@ layers:
                 draw:
                     lines:
                         color: '#D6D6D6'
-                        width: [[11, 0.5px], [15, 4px], [17, 7.25px], [18, 9m]]
+                        width: [[11, 0.5px], [15, 4px], [17, 6px], [18, 7m]]
                         outline:
                             width: [[11, 0px], [15, 0.5px], [16, 0.75px], [17, 1.25px], [18, 1.25px]]
                 stack-below-other-transit-later-zooms:
@@ -1826,7 +1826,7 @@ layers:
                 filter: { kind: subway }
                 draw:
                     lines:
-                        width: [[11, 0.5px], [15, 4px], [17, 7.25px], [18, 9m]]
+                        width: [[11, 0.5px], [15, 4px], [17, 6px], [18, 7m]]
                         outline:
                             #color: [[10,white],[11,black]]
                             width: [[11, 0px], [15, 0.5px], [16, 0.75px], [17, 1.25px], [18, 1.25px]]
@@ -1844,7 +1844,7 @@ layers:
                 draw:
                     lines:
                         order: 510
-                        width: [[11, 0.5px], [15, 4px], [17, 7.25px], [18, 9m]]
+                        width: [[11, 0.5px], [15, 4px], [17, 6px], [18, 7m]]
                         color: '#D6D6D6'
                         #outline:
                             #color: function() { if(feature.colour == 'silver') { return 'black'; } else { return [0.,0.,0.,.1]; } }
@@ -1921,7 +1921,7 @@ layers:
                                 family: Montserrat
                                 fill: function() { if(feature.colour == 'yellow') { return '#555'; } else { return 'white'; } }
                                 style: bold
-                                stroke: { color: '#D6D6D6', width: 3px }
+                                stroke: { color: '#BBB', width: 3px }
                                 size: [[7,7px],[12,8px],[16,11px]]
 
                 width_1char:
