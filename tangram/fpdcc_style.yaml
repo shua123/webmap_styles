@@ -1783,20 +1783,20 @@ layers:
                 draw:
                     lines:
                         color: '#D6D6D6'
-                        width: [[14,0.5px],[16,1.25px],[18,2.5px]]
+                        width: [[11, 0.5px], [15, 4px], [17, 7.25px], [18, 9m]]
             subway:
                 filter: { kind: subway }
                 draw:
                     lines:
                         color: '#D6D6D6'
-                        width: [[14,0.5px],[16,1.25px],[18,2.5px]]
+                        width: [[11, 0.5px], [15, 4px], [17, 7.25px], [18, 9m]]
             light_rail:
                 filter: { kind: [light_rail,tram], $zoom: { min: 15 } }
                 draw:
                     lines:
                         order: 415
                         color: '#D6D6D6'
-                        width: [[14,0.5px],[16,1.25px],[18,2.5px]]
+                        width: [[11, 0.5px], [15, 4px], [17, 7.25px], [18, 9m]]
         transit-overlay-rail-lines:
             filter:
                 not: { kind: [platform, railway] }
@@ -1805,18 +1805,18 @@ layers:
                     order: 499
                     visible: global.sdk_transit_overlay
                     color: '#D6D6D6'
-                    width: [[14,0.5px],[16,1.25px],[18,2.5px]]
+                    width: [[11, 0.5px], [15, 4px], [17, 7.25px], [18, 9m]]
                     outline:
                         color: [1.,1.,1.,.8]
-                        width: [[7,0px],[8,0.25px],[9,0.5px],[12,1.0px],[13,1.75px],[14,2px]]
+                        width: [[11, 0px], [15, 0.5px], [16, 0.75px], [17, 1.25px], [18, 1.25px]]
             train-sizing-color:
                 filter: { kind: train }
                 draw:
                     lines:
                         color: '#D6D6D6'
-                        width: [[14,0.5px],[16,1.25px],[18,2.5px]]
+                        width: [[11, 0.5px], [15, 4px], [17, 7.25px], [18, 9m]]
                         outline:
-                            width: [[12,1.0px],[13,1.75px],[14,2px]]
+                            width: [[11, 0px], [15, 0.5px], [16, 0.75px], [17, 1.25px], [18, 1.25px]]
                 stack-below-other-transit-later-zooms:
                     filter: { $zoom: { min: 9 } }
                     draw:
@@ -1826,25 +1826,25 @@ layers:
                 filter: { kind: subway }
                 draw:
                     lines:
-                        width: [[14,0.5px],[16,1.25px],[18,2.5px]]
+                        width: [[11, 0.5px], [15, 4px], [17, 7.25px], [18, 9m]]
                         outline:
                             #color: [[10,white],[11,black]]
-                            width: [[9,0px],[10,0.5px],[12,1.25px],[13,1.5px],[15,2px]]
+                            width: [[11, 0px], [15, 0.5px], [16, 0.75px], [17, 1.25px], [18, 1.25px]]
                             #width: [[12,1.5px],[13,2.0px],[14,2.5px]]
             light-rail-and-tram-sizing:
                 filter: { kind: [light_rail, tram] }
                 draw:
                     lines:
-                        width: [[14,0.5px],[16,1.25px],[18,2.5px]]
+                        width: [[11, 0.5px], [15, 4px], [17, 7.25px], [18, 9m]]
                         outline:
                             #color: [[11,white],[12,black]]
-                            width: [[12,0.25px],[13,0.5px],[14,1px],[16,2px]]
+                            width: [[11, 0px], [15, 0.5px], [16, 0.75px], [17, 1.25px], [18, 1.25px]]
             has-data-color:
                 filter: { colour: true }
                 draw:
                     lines:
                         order: 510
-                        width: [[14,0.5px],[16,1.25px],[18,2.5px]]
+                        width: [[11, 0.5px], [15, 4px], [17, 7.25px], [18, 9m]]
                         color: '#D6D6D6'
                         #outline:
                             #color: function() { if(feature.colour == 'silver') { return 'black'; } else { return [0.,0.,0.,.1]; } }
