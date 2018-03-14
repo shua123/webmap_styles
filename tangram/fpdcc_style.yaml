@@ -983,8 +983,8 @@ styles:
 
     railway_dash:
         base: lines
-        dash: [0.25, 1.0]
-        dash_background_color: global.offwhite_color
+        dash: [1.0, 1.0]
+        dash_background_color: '#E6E6E6'
 
     pixel-pattern-light:
         mix: [space-tile, generative-random]
