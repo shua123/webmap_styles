@@ -708,9 +708,17 @@ textures:
         filtering: mipmap
 
 sources:
-    fpdcc_parking_lots:
+    fpdcc_nature_preserves:
+        type: GeoJSON
+        url: https://raw.githubusercontent.com/fpdcc/webmap_data_updates/master/basemap/FPCC-basemap-nature-preserves.geojson
+        
+    fpdcc_parking_icons:
         type: GeoJSON
         url: https://raw.githubusercontent.com/fpdcc/webmap_data_updates/master/basemap/FPCC-basemap-parking-icons.geojson
+        
+    fpdcc_parking_geometry:
+        type: GeoJSON
+        url: https://raw.githubusercontent.com/fpdcc/webmap_data_updates/master/basemap/FPCC-basemap-parking-geometry.geojson
     fpdcc:
         type: GeoJSON
         url: https://raw.githubusercontent.com/fpdcc/webmap_data_updates/master/basemap/FPCC-basemap-boundaries.geojson
@@ -1234,8 +1242,22 @@ scene:
         color: '#F2F2F2'
 layers:
     # Map overlays for styling the server response (using special source layer names) for route line, current location, and search result pins
-    fpdcc_parking_points:
-        data: {source: fpdcc_parking_lots}
+    fpdcc_nature_preserves:
+        data: {source: fpdcc_nature_preserves}
+        draw:
+            polygons:
+                order: 181
+                color: '#92DC97'
+    
+    fpdcc_parking_geometry:
+        data: {source: fpdcc_parking_geometry}
+        draw:
+            polygons:
+                order: 182
+                color: [0.965, 0.965, 0.965, 0.50]
+                
+    fpdcc_parking_icons:
+        data: {source: fpdcc_parking_icons}
         draw:
             points:
                 order: 1
@@ -1526,12 +1548,12 @@ layers:
                 visible: true
                 order: global.sdk_order_under_roads_0
                 color: '#8BD1E3' # colors the wave lines
-        new_later:
-            filter: { $zoom: { min: 12 } }
-            draw:
-                polygons:
-                    order: global.sdk_order_under_roads_0
-                    color: '#8BD1E3' # colors the wave lines
+    new_later:
+        filter: { $zoom: { min: 12 } }
+        draw:
+            polygons:
+                order: global.sdk_order_under_roads_0
+                color: '#8BD1E3' # colors the wave lines
 
 
         new_lakes:
