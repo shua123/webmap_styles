@@ -235,7 +235,7 @@ global:
     text_visible_neighbourhoods_e:  false
     text_visible_building:          false                       # false for default
     text_visible_address:           false                       # false for default
-    text_visible_water_labels:      false
+    text_visible_water_labels:      true
     text_visible_island:            false
     label_visible_landuse_green:    false
     icon_visible_landuse_green:     false
@@ -266,45 +266,45 @@ global:
     sdk_coastline:                  false
 
     #roads
-    highway1:                   [1.00,1.00,1.00]
-    highway_link1:              [0.00, 0.00, 0.00]
-    highway_casing1:            [0.40, 0.40, 0.40]
-    highway_tunnel1:            [0.7, 0.7, 0.7]
-    highway_tunnel_casing1:     [1.00, 1.00, 1.00]
-    highway_link_tunnel_casing1: [1.00, 1.00, 1.00]
+    highway1:                   '#FFF'
+    highway_link1:              '#FFF'
+    highway_casing1:            '#CCC'
+    highway_tunnel1:            '#FFF'
+    highway_tunnel_casing1:     '#CCC'
+    highway_link_tunnel_casing1: '#CCC'
     ferry1:                     [0.75,0.75,0.75]
     rail1:                      '#999'
     rail1_e:                    '#bbb'
     rail2:                      '#777'             # less important rail (service, sidings)
-    major_road1:                [0.0, 0.0, 0.0]
-    major_road1b:               [0.935, 0.935, 0.935]
-    major_road1c:               white    #15%
-    major_road2:                [0.935, 0.935, 0.935]
-    major_road2a:               [0.935, 0.935, 0.935]
-    major_road2b:               [0.935, 0.935, 0.935]
-    major_road3:                [0.935, 0.935, 0.935]
-    major_road4:                [0.00, 0.00, 0.00]
-    major_road5:                white
-    major_casing1:              [0.40, 0.40, 0.40]        # same as highway_casing1
-    major_casing2:              [0.40, 0.40, 0.40]        # zoomed out
-    major_tunnel1:              [0.7, 0.7, 0.7]
-    major_tunnel_casing1:       [1.00, 1.00, 1.00]
-    major_route1:               [0.0, 0.0, 0.0]
-    major_route2:               [0.2, 0.2, 0.2]           # zoomed out
-    minor_route:                [0.97, 0.97, 0.97]        # same as major_route
-    minor_road1:                [0.935, 0.935, 0.935]     # natural earth
-    minor_road2:                [0.935, 0.935, 0.935]     # natural earth, same as major_road2
-    minor_road3:                [0.935, 0.935, 0.935]
-    minor_road4:                [0.935, 0.935, 0.935]     # zoomed out
-    minor_road5:                [0.935, 0.935, 0.935]     # zoomed out, again
-    minor_casing1:              white                     # same as highway_casing1
-    minor_casing2:              white                     # zoomed out
-    minor_tunnel1:              [0.7, 0.7, 0.7]
-    minor_tunnel_casing1:       [1.00, 1.00, 1.00]
-    service_road1:              [0.935, 0.935, 0.935]
-    service_road2:              white
-    service_road_casing1:       [0.40, 0.40, 0.40]
-    service_road_casing2:       white
+    major_road1:                '#FFF'
+    major_road1b:               '#FFF'
+    major_road1c:               '#FFF'
+    major_road2:                '#FFF'
+    major_road2a:               '#FFF'
+    major_road2b:               '#FFF'
+    major_road3:                '#FFF'
+    major_road4:                '#FFF'
+    major_road5:                '#FFF'
+    major_casing1:              '#CCC'                    # same as highway_casing1
+    major_casing2:              '#CCC'                    # zoomed out
+    major_tunnel1:              '#FFF'
+    major_tunnel_casing1:       '#CCC'
+    major_route1:               '#FFF'
+    major_route2:               '#FFF'                    # zoomed out
+    minor_route:                '#FFF'                    # same as major_route
+    minor_road1:                '#FFF'                    # natural earth
+    minor_road2:                '#FFF'                    # natural earth, same as major_road2
+    minor_road3:                '#FFF'
+    minor_road4:                '#FFF'                    # zoomed out
+    minor_road5:                '#FFF'                    # zoomed out, again
+    minor_casing1:              '#FFF'                    # same as highway_casing1
+    minor_casing2:              '#FFF'                    # zoomed out
+    minor_tunnel1:              '#FFF'
+    minor_tunnel_casing1:       '#FFF'
+    service_road1:              '#FFF'
+    service_road2:              '#FFF'
+    service_road_casing1:       '#FFF'
+    service_road_casing2:       '#FFF'
     path1:                      [0.97, 0.97, 0.97]
     path2:                      [0.97, 0.97, 0.97]        # zoomed out
     path_casing1:               [0.40, 0.40, 0.40]
