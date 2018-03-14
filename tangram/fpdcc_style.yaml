@@ -2093,7 +2093,7 @@ layers:
             draw:
                 lines:
                     color: [[5, '#FFF'], [18, '#FFF']]
-                    width: [[5, 0.75px], [18, 32px]]
+                    width: [[5, 0.75px], [18, 10px]]
                     outline:
                         color: [[7, '#CCC'], [10, '#CCC'], [16, '#CCC']]
                         width: [[7, 0.5px], [10, 1px], [16, 2px]]
