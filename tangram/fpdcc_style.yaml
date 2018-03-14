@@ -708,9 +708,13 @@ textures:
         filtering: mipmap
 
 sources:
-    fpdcc_parking_lots:
+    fpdcc_parking_icons:
         type: GeoJSON
         url: https://raw.githubusercontent.com/fpdcc/webmap_data_updates/master/basemap/FPCC-basemap-parking-icons.geojson
+        
+    fpdcc_parking_geometry:
+        type: GeoJSON
+        url: https://raw.githubusercontent.com/fpdcc/webmap_data_updates/master/basemap/FPCC-basemap-parking-geometry.geojson
     fpdcc:
         type: GeoJSON
         url: https://raw.githubusercontent.com/fpdcc/webmap_data_updates/master/basemap/FPCC-basemap-boundaries.geojson
@@ -1234,8 +1238,15 @@ scene:
         color: '#F2F2F2'
 layers:
     # Map overlays for styling the server response (using special source layer names) for route line, current location, and search result pins
-    fpdcc_parking_points:
-        data: {source: fpdcc_parking_lots}
+    fpdcc_parking_geometry:
+        data: {source: fpdcc_parking_geometry}
+        draw:
+            polygons:
+                order: 181
+                color: [0.965, 0.965, 0.965, 0.50]
+                
+    fpdcc_parking_icons:
+        data: {source: fpdcc_parking_icons}
         draw:
             points:
                 order: 1
