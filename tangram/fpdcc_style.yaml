@@ -14,6 +14,7 @@ import:
     - https://www.nextzen.org/carto/refill-style/11/refill-style.zip
     - https://www.nextzen.org/carto/refill-style/11/themes/color-gray.zip
     - https://www.nextzen.org/carto/refill-style/11/themes/label-10.zip
+    - https://www.nextzen.org/carto/refill-style/11/themes/no-texture.zip
 
 global:
 
@@ -234,10 +235,10 @@ global:
     text_visible_neighbourhoods_e:  false
     text_visible_building:          false                       # false for default
     text_visible_address:           false                       # false for default
-    text_visible_water_labels:      false
+    text_visible_water_labels:      true
     text_visible_island:            false
-    label_visible_landuse_green:    false                        #this needs work
-    icon_visible_landuse_green:     false                        #this needs work
+    label_visible_landuse_green:    false
+    icon_visible_landuse_green:     false
     text_visible_landuse_green:     false
     icon_size_green:                [[13, '14px'], [16, '18px'], [18, '19px']]      # 0px for no, default, more  [[13, '14px'], [16, '18px'], [18, '19px']]
     icon_size_green_l:              [[14, '24px'], [16, '32px']]                    # 0px for no, default, more  [[14, '24px'], [16, '32px']]
@@ -255,54 +256,55 @@ global:
     text_visible_tertiary:          true
     text_visible_minor_road:        true
     text_visible_service_road:      true
-    text_visible_path:              true
+    text_visible_path:              false
     text_visible_piste:             true
     text_visible_steps:             true
     text_visible_aerialway:         true
     sdk_road_shields:               true
     text_visible_exits:             true
     text_visible_airport_gate:      false
+    sdk_coastline:                  false
 
     #roads
-    highway1:                   [1.00,1.00,1.00]
-    highway_link1:              [0.00, 0.00, 0.00]
-    highway_casing1:            [0.40, 0.40, 0.40]
-    highway_tunnel1:            [0.7, 0.7, 0.7]
-    highway_tunnel_casing1:     [1.00, 1.00, 1.00]
-    highway_link_tunnel_casing1: [1.00, 1.00, 1.00]
+    highway1:                   '#FFF'
+    highway_link1:              '#FFF'
+    highway_casing1:            '#CCC'
+    highway_tunnel1:            '#FFF'
+    highway_tunnel_casing1:     '#CCC'
+    highway_link_tunnel_casing1: '#CCC'
     ferry1:                     [0.75,0.75,0.75]
     rail1:                      '#999'
     rail1_e:                    '#bbb'
     rail2:                      '#777'             # less important rail (service, sidings)
-    major_road1:                [0.0, 0.0, 0.0]
-    major_road1b:               [0.935, 0.935, 0.935]
-    major_road1c:               white    #15%
-    major_road2:                [0.935, 0.935, 0.935]
-    major_road2a:               [0.935, 0.935, 0.935]
-    major_road2b:               [0.935, 0.935, 0.935]
-    major_road3:                [0.935, 0.935, 0.935]
-    major_road4:                [0.00, 0.00, 0.00]
-    major_road5:                white
-    major_casing1:              [0.40, 0.40, 0.40]        # same as highway_casing1
-    major_casing2:              [0.40, 0.40, 0.40]        # zoomed out
-    major_tunnel1:              [0.7, 0.7, 0.7]
-    major_tunnel_casing1:       [1.00, 1.00, 1.00]
-    major_route1:               [0.0, 0.0, 0.0]
-    major_route2:               [0.2, 0.2, 0.2]           # zoomed out
-    minor_route:                [0.97, 0.97, 0.97]        # same as major_route
-    minor_road1:                [0.935, 0.935, 0.935]     # natural earth
-    minor_road2:                [0.935, 0.935, 0.935]     # natural earth, same as major_road2
-    minor_road3:                [0.935, 0.935, 0.935]
-    minor_road4:                [0.935, 0.935, 0.935]     # zoomed out
-    minor_road5:                [0.935, 0.935, 0.935]     # zoomed out, again
-    minor_casing1:              white                     # same as highway_casing1
-    minor_casing2:              white                     # zoomed out
-    minor_tunnel1:              [0.7, 0.7, 0.7]
-    minor_tunnel_casing1:       [1.00, 1.00, 1.00]
-    service_road1:              [0.935, 0.935, 0.935]
-    service_road2:              white
-    service_road_casing1:       [0.40, 0.40, 0.40]
-    service_road_casing2:       white
+    major_road1:                '#FFF'
+    major_road1b:               '#FFF'
+    major_road1c:               '#FFF'
+    major_road2:                '#FFF'
+    major_road2a:               '#FFF'
+    major_road2b:               '#FFF'
+    major_road3:                '#FFF'
+    major_road4:                '#FFF'
+    major_road5:                '#FFF'
+    major_casing1:              '#CCC'                    # same as highway_casing1
+    major_casing2:              '#CCC'                    # zoomed out
+    major_tunnel1:              '#FFF'
+    major_tunnel_casing1:       '#CCC'
+    major_route1:               '#FFF'
+    major_route2:               '#FFF'                    # zoomed out
+    minor_route:                '#FFF'                    # same as major_route
+    minor_road1:                '#FFF'                    # natural earth
+    minor_road2:                '#FFF'                    # natural earth, same as major_road2
+    minor_road3:                '#FFF'
+    minor_road4:                '#FFF'                    # zoomed out
+    minor_road5:                '#FFF'                    # zoomed out, again
+    minor_casing1:              '#FFF'                    # same as highway_casing1
+    minor_casing2:              '#FFF'                    # zoomed out
+    minor_tunnel1:              '#FFF'
+    minor_tunnel_casing1:       '#FFF'
+    service_road1:              '#FFF'
+    service_road2:              '#FFF'
+    service_road_casing1:       '#FFF'
+    service_road_casing2:       '#FFF'
     path1:                      [0.97, 0.97, 0.97]
     path2:                      [0.97, 0.97, 0.97]        # zoomed out
     path_casing1:               [0.40, 0.40, 0.40]
@@ -711,7 +713,7 @@ sources:
         url: https://raw.githubusercontent.com/fpdcc/webmap_data_updates/master/basemap/FPCC-basemap-parking-icons.geojson
     fpdcc:
         type: GeoJSON
-        url: https://raw.githubusercontent.com/fpdcc/webmap_data_updates/master/map%20data/geojson/FPCC_boundary.geojson
+        url: https://raw.githubusercontent.com/fpdcc/webmap_data_updates/master/basemap/FPCC-basemap-boundaries.geojson
     mapzen:
         type: MVT
         url: https://tile.nextzen.org/tilezen/vector/v1/all/{z}/{x}/{y}.mvt
@@ -1204,7 +1206,7 @@ styles:
 
 scene:
     background:
-        color: global.white_color
+        color: '#F2F2F2'
 
 fonts:
     Open Sans:
@@ -1229,7 +1231,7 @@ fonts:
 
 scene:
     background:
-        color: global.white_color
+        color: '#F2F2F2'
 layers:
     # Map overlays for styling the server response (using special source layer names) for route line, current location, and search result pins
     fpdcc_parking_points:
@@ -1246,7 +1248,7 @@ layers:
         draw:
             polygons:
                 order: 180
-                color: [0.678, 0.820, 0.694, 1.00]
+                color: '#C4EDC7'
                 
     mz_route_line:
         data: { source: mz_route_line }
@@ -1521,14 +1523,16 @@ layers:
         data: { source: mapzen, layer: water }
         draw:
             polygons:
-                order: global.feature_order
-                color: [0.584, 0.898, 0.976, 1.00] # colors the wave lines
+                visible: true
+                order: global.sdk_order_under_roads_0
+                color: '#8BD1E3' # colors the wave lines
         new_later:
             filter: { $zoom: { min: 12 } }
             draw:
                 polygons:
-                    color: [0.059, 0.404, 0.710, 1.00] # colors the wave lines
-                    order: global.feature_order
+                    order: global.sdk_order_under_roads_0
+                    color: '#8BD1E3' # colors the wave lines
+
 
         new_lakes:
             filter:
@@ -1536,25 +1540,25 @@ layers:
                     - kind: [ocean, lake, water, riverbank, reservoir, swimming_pool]
                 any:
                     # limit show smaller landuse areas to higher zooms
-                    - { $zoom: { min: 1 },  area: { min: 40000000000 } }
-                    - { $zoom: { min: 2 },  area: { min: 20000000000 } }
+                    - { $zoom: { min: 1 },  area: { min: 10000000000 } }
+                    - { $zoom: { min: 2 },  area: { min: 7000000000 } }
                     # some weird natural earth scale set transition
-                    - { $zoom: { min: 3 },  area: { min: 80000000000 } }
-                    - { $zoom: { min: 4 },  area: { min: 5000000000 } }
-                    - { $zoom: { min: 5 },  area: { min: 700000000 } }
-                    - { $zoom: { min: 6 },  area: { min: 500000000 } }
-                    - { $zoom: { min: 7 },  area: { min: 160000000 } }
-                    - { $zoom: { min: 8 },  area: { min: 40000000 } }
-                    - { $zoom: { min: 9 },  area: { min: 10000000 } }
-                    - { $zoom: { min: 10 }, area: { min: 8000000 } }
-                    - { $zoom: { min: 11 }, area: { min: 2000000 } }
-                    - { $zoom: { min: 12 }, area: { min: 200000 } }
-                    - { $zoom: { min: 13 }, area: { min: 100000 } }
-                    - { $zoom: { min: 14 }, area: { min: 2000 } }
+                    - { $zoom: { min: 3 },  area: { min: 5000000000 } }
+                    - { $zoom: { min: 4 },  area: { min: 300000000 } }
+                    - { $zoom: { min: 5 },  area: { min: 50000000 } }
+                    - { $zoom: { min: 6 },  area: { min: 50000000 } }
+                    - { $zoom: { min: 7 },  area: { min: 50000000 } }
+                    - { $zoom: { min: 8 },  area: { min: 50000000 } }
+                    - { $zoom: { min: 9 },  area: { min: 15000000 } }
+                    - { $zoom: { min: 10 }, area: { min: 4000000 } }
+                    - { $zoom: { min: 11 }, area: { min: 1000000 } }
+                    - { $zoom: { min: 12 }, area: { min: 250000 } }
+                    - { $zoom: { min: 13 }, area: { min: 150000 } }
+                    - { $zoom: { min: 14 }, area: { min: 40000 } }
                     - { $zoom: { min: 15 } }
             draw:
                 polygons:
-                    color: red
+                    color: '#8BD1E3'
                     order: global.feature_order
             #draw:
              #   polygons:
@@ -1564,33 +1568,33 @@ layers:
             filter: { not: { kind: [ocean, lake, water, reservoir, playa] }, $zoom: { min: 11 }, area: { min: 100 } }
             draw:
                 polygons:
-                    color: [0.078, 0.180, 0.392, 1.00]
+                    color: '#8BD1E3'
         playas:
             filter: { kind: playa }
             draw:
                 polygons:
                     order: global.feature_order
-                    color: [0.584, 0.898, 0.976, 1.00]
+                    color: '#8BD1E3'
         swimming_pool:
             filter: { kind: swimming_pool }
             draw:
                 polygons:
-                    color: [0.584, 0.898, 0.976, 1.00]
+                    color: '#8BD1E3'
         water-boundary-ocean:
             filter: { boundary: true, kind: ocean, $zoom: { min: 1 } }
             draw:
                 coast:
                     order: global.feature_order
-                    color: [0.584, 0.898, 0.976, 1.00]
-                    width: [[1, 1px], [20, 10px]]
+                    color: '#8BD1E3'
+                    width: [[1, 0px], [20, 0px]]
                     join: round
         water_boundaries-not-ocean:
             filter: { boundary: true, not: { kind: ocean }, $zoom: { min: 8 } }
             draw:
                 coast:
                     order: global.feature_order
-                    color: [0.584, 0.898, 0.976, 1.00]
-                    width: [[6, 0.75px], [10, 1px], [14, 2px], [16, 3px]]
+                    color: '#8BD1E3'
+                    width: [[6, 0px], [10, 0px], [14, 0px], [16, 0px]]
                     join: round
             # do we still need this?
             # early:
@@ -1608,15 +1612,15 @@ layers:
                 filter: { kind: riverbank }
                 draw:
                     coast:
-                        color: [0.137, 0.290, 0.569, 1.00]
-                        width: [[9, 0.5px], [11, 1px], [14, 1px], [15, 2px]]
+                        color: '#8BD1E3'
+                        width: [[9, 0px], [11, 0px], [14, 0px], [15, 0px]]
         new_river:
             #river center lines, not boundaries for polygons
             filter: { kind: [river,canal,stream,dam,ditch,drain], $zoom: { min: 14 }, not: { is_tunnel: true } }
             draw:
                 lines:
                     order: global.feature_order
-                    color: [0.059, 0.173, 0.380, 1.00]
+                    color: '#8BD1E3'
                     width: [[14, 0.5px], [15, 2px], [17, 6px],[ 18, 8px]]
                     cap: round
 
@@ -2088,19 +2092,19 @@ layers:
             filter: { kind: highway, $zoom: { min: 8 } }
             draw:
                 lines:
-                    color: [[8, global.black_color], [13, global.black_color], [14, global.white_color]]
-                    width: [[8, 1px], [13, 1.25px], [14, 0.1px], [15, 1.5px], [17, 8px], [18, 10m]]
+                    color: [[5, '#FFF'], [18, '#FFF']]
+                    width: [[5, 0.75px], [10, 2.25px], [18, 4px]]
                     outline:
-                        color: [[8, global.white_color], [12, global.white_color], [13, global.black_color]]
-                        width: [[8, 0px], [13, 0px], [14, 1px], [15, 2px], [19, 6px]]
+                        color: [[7, '#CCC'], [10, '#CCC'], [16, '#CCC']]
+                        width: [[7, 0.5px], [10, 1px], [16, 2px]]
             link:
                 filter: { is_link: true } # on- and off-ramps, etc
                 draw:
                     lines:
-                        color: [[9, global.mid_color], [13, global.mid_color], [14, global.white_color]]
+                        color: [[9, '#FFF'], [13, '#FFF'], [14, '#FFF']]
                         width: [[9, 0px], [13, 0.75px], [14, 0.1px], [17, 4px], [18, 5m]]
                         outline:
-                            color: [[9, global.white_color], [12, global.white_color], [13, global.mid_color], [15, global.black_color]]
+                            color: [[9, '#CCC'], [12, '#CCC'], [13, '#CCC'], [15, '#CCC']]
                             width: [[9, 0px], [13, 0px], [14, 0.4px], [17, 1.5px], [18, 2px]]
                 early_link:
                     filter: { $zoom: {min: 13, max: 15} }
@@ -2111,16 +2115,16 @@ layers:
                     filter: {is_tunnel: true, $zoom: { min: 13 } }
                     draw:
                         lines:
-                            color: [[13, global.light_color], [14, global.ultralight_color]]
+                            color: [[13, '#FFF'], [14, '#FFF']]
                             outline:
-                                color: [[12, global.white_color], [13, global.light_color]]
+                                color: [[12, '#CCC'], [13, '#CCC']]
             tunnel:
                 filter: { is_tunnel: true, $zoom: { min: 13 } }
                 draw:
                     lines:
-                        color: [[13, global.light_color], [14, global.ultralight_color]]
+                        color: [[13, '#FFF'], [14, '#FFF']]
                         outline:
-                            color: [[12, global.white_color], [13, global.light_color]]
+                            color: [[12, '#CCC'], [13, '#CCC']]
             highway_bridge:
                 filter: { is_bridge: true }
                 draw:
@@ -2158,19 +2162,19 @@ layers:
             # default style
             draw:
                 lines:
-                    color: [[8, global.black_color], [13, global.black_color], [17, global.white_color]]
-                    width: [[13, 1px], [14, 1px], [16, 2.5px], [17, 3px]]
+                    color: [[8, '#FFF'], [13, '#FFF'], [17, '#FFF']]
+                    width: [[5, 0.5px], [10, 1.5px], [18, 3px]]
                     outline:
-                        width: [[12, 0px], [13, .5px], [15, 1px], [17, 2px]]
+                        width: [[7, 0px], [10, .5px], [16, 1.25px]]
             trunk_primary:
                 filter: { kind_detail: [trunk, primary] }
                 draw:
                     lines:
-                        color: [[8, global.midlight_color], [12, global.mid_color], [13, global.black_color], [14, global.white_color]]
-                        width: [[8, 0.5px], [11, 0.5px], [13, 1px], [14, 0.1px], [16, 2px], [17, 8px], [18, 10m]]
+                        color: [[8, '#FFF'], [12, '#FFF'], [13, '#FFF'], [14, '#FFF']]
+                        width: [[5, 0.5px], [10, 1.5px], [18, 3px]]
                         outline:
-                            color: [[8, global.white_color], [12, global.white_color], [13, global.black_color]]
-                            width: [[8, 0px], [13, 0px], [14, 0.75px], [16, 1.5px], [18, 4px]]
+                            color: [[8, '#CCC'], [12, '#CCC'], [13, '#CCC']]
+                            width: [[7, 0px], [10, .5px], [16, 1.25px]]
                 early:
                     filter: { $zoom: { max: 16 } }
                     draw:
@@ -2188,11 +2192,11 @@ layers:
                     filter: { ref: true }
                     draw:
                         lines:
-                            color: [[8, global.midlight_color], [12, global.mid_color], [13, global.black_color], [14, global.white_color]]
-                            width: [[9, 0.5px], [13, 1px], [14, 0.1px], [15, 1.25px], [16, 2px], [17, 8px], [18, 10m]]
+                            color: [[8, '#FFF'], [12, '#FFF'], [13, '#FFF'], [14, '#FFF']]
+                            width: [[5, 0.5px], [10, 1.5px], [18, 3px]]
                             outline:
-                                color: [[8, global.white_color], [12, global.white_color], [13, global.black_color]]
-                                width: [[8, 0px], [13, 0px], [14, 0.75px], [15, 1.5px], [17, 3px], [18, 4px]]
+                                color: [[8, '#CCC'], [12, '#CCC'], [13, '#CCC']]
+                                width: [[7, 0px], [10, .5px], [16, 1.25px]]
                     early:
                         filter: { $zoom: { max: 16 } }
                         draw:
@@ -2204,9 +2208,9 @@ layers:
                         filter: { is_tunnel: true, $zoom: { min: 13 } }
                         draw:
                             lines:
-                                color: [[13, global.light_color], [14, global.ultralight_color]]
+                                color: [[13, '#FFF'], [14, '#FFF']]
                                 outline:
-                                    color: [[12, global.white_color], [13, global.light_color]]
+                                    color: [[12, '#CCC'], [13, '#CCC']]
                     labels-trunk_primary-route-z13-z14:
                         filter: { $zoom: [13,14] }
                         draw:
@@ -2258,26 +2262,26 @@ layers:
                 filter: { is_link: true } # on- and off-ramps, etc
                 draw:
                     lines:
-                        color: [[10, global.mid_color], [15, global.light_color], [16, global.white_color]]
+                        color: [[10, '#FFF'], [15, '#FFF'], [16, '#FFF']]
                         width: [[10, 0.5px], [12, 0.5px], [15, 1px], [16, 1.75px], [17, 3px], [18, 5m]]
                         outline:
-                            color: [[10, global.white_color], [15, global.mid_color], [16, global.black_color]]
+                            color: [[10, '#CCC'], [15, '#CCC'], [16, '#CCC']]
                             width: [[10, 0px], [15, 0px], [16, 1px], [18, 2px]]
             tunnel:
                 filter: { is_tunnel: true, $zoom: { min: 13 } }
                 draw:
                     lines:
-                        color: [[13, global.light_color], [14, global.ultralight_color]]
+                        color: [[13, '#FFF'], [14, '#FFF']]
                         outline:
-                            color: [[12, global.white_color], [13, global.light_color]]
+                            color: [[12, '#CCC'], [13, '#CCC']]
             secondary:
                 filter: { kind_detail: secondary }
                 draw:
                     lines:
-                        color: [[10, global.lighter_color], [13, global.midlight_color], [15, global.dark_color], [16, global.white_color]]
+                        color: [[10, '#FFF'], [13, '#FFF'], [15, '#FFF'], [16, '#FFF']]
                         width: [[10, 0.5px], [12, 0.5px], [14, 1px], [15, 1.5px], [16, 0.1px], [17, 7.5px], [18, 9m]]
                         outline:
-                            color: [[10, global.white_color], [14, global.white_color], [15, global.black_color]]
+                            color: [[10, '#CCC'], [14, '#CCC'], [15, '#CCC']]
                             width: [[10, 0px], [15, 0px], [16, 1.1px], [17, 2px]]
                 early:
                     filter: { $zoom: { max: 16 } }
@@ -2290,10 +2294,10 @@ layers:
                     filter: { ref: true, $zoom: { min: 12 } }
                     draw:
                         lines:
-                            color: [[10, global.lighter_color], [13, global.mid_color], [15, global.black_color], [16, global.white_color]]
+                            color: [[10, '#FFF'], [13, '#FFF'], [15, '#FFF'], [16, '#FFF']]
                             width: [[10, 0.5px], [13, 1px], [15, 1.5px], [16, 0.1px], [17, 7.5px], [18, 9m]]
                             outline:
-                                color: [[10, global.white_color], [14, global.white_color], [15, global.black_color]]
+                                color: [[10, '#CCC'], [14, '#CCC'], [15, '#CCC']]
                                 width: [[10, 0px], [15, 0px], [16, 1.5px], [17, 2px]]
                     early:
                         filter: { $zoom: { max: 15 } }
@@ -2306,9 +2310,9 @@ layers:
                         filter: {is_tunnel: true, $zoom: { min: 13 } }
                         draw:
                             lines:
-                                color: [[13, global.light_color], [15, global.light_color], [16, global.ultralight_color]]
+                                color: [[13, '#FFF'], [15, '#FFF'], [16, '#FFF']]
                                 outline:
-                                    color: [[13, global.white_color], [14, global.white_color], [15, global.light_color]]
+                                    color: [[13, '#CCC'], [14, '#CCC'], [15, '#CCC']]
                     labels-secondary-routes-z13-z14:
                         filter: { $zoom: [13,14] }
                         draw:
@@ -2347,10 +2351,10 @@ layers:
                 filter: { kind_detail: [tertiary, tertiary_link] }
                 draw:
                     lines:
-                        color: [[11, global.lighter_color], [15, global.dark_color], [16, global.white_color]]
+                        color: [[11, '#FFF'], [15, '#FFF'], [16, '#FFF']]
                         width: [[11, 0.5px], [15, 1.25px], [16, 0.1px], [17, 6px], [18, 9m]]
                         outline:
-                            color: [[11, global.white_color], [14, global.white_color], [15, global.black_color]]
+                            color: [[11, '#CCC'], [14, '#CCC'], [15, '#CCC']]
                             width: [[11, 0px], [15, 0px], [16, 1px], [17, 2px], [18, 2px]]
                 early:
                     filter: { $zoom: { max: 15 } }
@@ -2363,10 +2367,10 @@ layers:
                     filter: { ref: true, $zoom: { min: 12} }
                     draw:
                         lines:
-                            color: [[11, global.lighter_color], [15, global.dark_color], [16, global.white_color]]
+                            color: [[11, '#FFF'], [15, '#FFF'], [16, '#FFF']]
                             width: [[11, 0.5px], [15, 1.25px], [16, 0.1px], [17, 6px], [18, 9m]]
                             outline:
-                                color: [[11, global.white_color], [14, global.white_color], [15, global.black_color]]
+                                color: [[11, '#CCC'], [14, '#CCC'], [15, '#CCC']]
                                 width: [[11, 0px], [15, 0px], [16, 1px], [17, 2px], [18, 2px]]
                     early:
                         filter: { $zoom: { max: 15 } }
@@ -2379,17 +2383,17 @@ layers:
                         filter: { is_tunnel: true, $zoom: { min: 13 } }
                         draw:
                             lines:
-                                color: [[13, global.light_color], [15, global.light_color], [16, global.ultralight_color]]
+                                color: [[13, '#FFF'], [15, '#FFF'], [16, '#FFF']]
                                 outline:
-                                    color: [[13, global.white_color], [14, global.white_color], [15, global.light_color]]
+                                    color: [[13, '#CCC'], [14, '#CCC'], [15, '#CCC']]
                 link:
                     filter: { is_link: true } # on- and off-ramps, etc
                     draw:
                         lines:
-                            color: [[14, global.light_color], [15, global.dark_color], [16, global.white_color]]
+                            color: [[14, '#FFF'], [15, '#FFF'], [16, '#FFF']]
                             width: [[11, 0.0px], [15, 0.5px], [16, 0.1px], [18, 4.5m]]
                             outline:
-                                color: [[11, global.white_color], [14, global.white_color], [15, global.black_color]]
+                                color: [[11, '#CCC'], [14, '#CCC'], [15, '#CCC']]
                                 width: [[11, 0px], [14, 0px], [16, 0.25px], [18, 2px]]
                 labels-tertiary:
                     filter: { $zoom: { min: 13 } }
@@ -2406,10 +2410,10 @@ layers:
             filter: { kind: minor_road, not: { kind_detail: service }, $zoom: { min: 8 } }
             draw:
                 lines:
-                    color: [[11, global.offwhite_color], [15, global.midlight_color], [16, global.white_color]]
+                    color: [[11, '#FFF'], [15, '#FFF'], [16, '#FFF']]
                     width: [[11, 0.35px], [13, 0.5px], [14, 1px], [15, 1px], [16, 0.1px], [17, 3.5px], [18, 9m]]
                     outline:
-                        color: [[11, global.white_color], [14, global.white_color], [15, global.midlight_color], [17, global.black_color]]
+                        color: [[11, '#CCC'], [14, '#CCC'], [15, '#CCC'], [17, '#CCC']]
                         width: [[11, 0px], [15, 0px], [16, 0.75px], [17, 1.5px], [18, 1.5px]]
             early:
                 filter: { $zoom: { max: 16 } }
@@ -2430,9 +2434,9 @@ layers:
                 filter: {is_tunnel: true, $zoom: { min: 13 } }
                 draw:
                     lines:
-                        color: [[13, global.light_color], [15, global.light_color], [16, global.ultralight_color]]
+                        color: [[13, '#FFF'], [15, '#FFF'], [16, '#FFF']]
                         outline:
-                            color: [[13, global.white_color], [14, global.white_color], [15, global.light_color]]
+                            color: [[13, '#CCC'], [14, '#CCC'], [15, '#CCC']]
             minor_road_bridge:
                 filter: { is_bridge: true }
                 draw:
@@ -2455,6 +2459,7 @@ layers:
             filter: { kind: minor_road, kind_detail: service, $zoom: { min: 13 } }
             draw:
                 lines:
+                    visible: false
                     color: [[13, global.offwhite_color], [15, global.midlight_color], [16, global.white_color]]
                     width: [[13, 0px], [15, 0.75px], [16, 0.1px], [17, 2.5px], [18, 5m]]
                     outline:
@@ -2465,7 +2470,7 @@ layers:
                 draw:
                     text-blend-order:
                         priority: 60
-                        visible: global.text_visible_service_road
+                        visible: false
                         text_source: name
                         font:
                             fill: [[17, global.dark_color], [18, global.black_color]]
@@ -2478,6 +2483,7 @@ layers:
                     - operator: 'Forest Preserve District of Cook County'
             draw:
                 lines:
+                    visible: false
                     color: [0.722, 0.004, 0.004, 0.00]
         path:
             filter:
@@ -2489,6 +2495,7 @@ layers:
                     - landuse_kind: [golf_course]
             draw:
                 lines:
+                    visible: false
                     color: [[14, global.light_color], [16, global.white_color]]
                     width: [[14, 0.35px], [15, 0px], [16, 0.25px], [18, 2px], [20, 1m]]
                     outline:
@@ -2506,6 +2513,7 @@ layers:
                 filter: { kind_detail: pedestrian }
                 draw:
                     lines:
+                        visible: false
                         color: [[14, global.light_color], [16, global.white_color]]
                         width: [[14, 0.35px], [15, 0px], [16, 0.25px], [18, 2px], [20, 1m]]
                         outline:
@@ -2515,6 +2523,7 @@ layers:
                 filter: { kind_detail: footway }
                 draw:
                     lines:
+                        visible: false
                         color: [[14, global.light_color], [16, global.white_color]]
                         width: [[14, 0.35px], [15, 0px], [16, 0.25px], [18, 2px], [20, 1m]]
                         outline:
@@ -2541,7 +2550,7 @@ layers:
                 draw:
                     text-blend-order:
                         priority: 61
-                        visible: global.text_visible_path
+                        visible: false
                         text_source: name
                         font:
                             fill: global.dark_color
@@ -2551,6 +2560,7 @@ layers:
             filter: { kind: path, kind_detail: track }
             draw:
                 lines:
+                    visible: false
                     color: [[13, global.white_color], [16, global.light_color], [17, global.white_color]]
                     width: [[13, 0px], [14, 0.15px], [16, 1px], [18, 1.5px], [20, 1m]]
                     outline:
@@ -4683,7 +4693,7 @@ layers:
                     size: global.icon_size_green
                     sprite: park
                     text:
-                        visible: global.text_visible_landuse_green
+                        visible: false
                         font:
                             fill: global.dark_color
                             style: italic
@@ -4704,7 +4714,7 @@ layers:
                     size: global.icon_size_green
                     sprite: park
                     text:
-                        visible: global.text_visible_landuse_green
+                        visible: false
                         font:
                             fill: global.dark_color
                             style: italic
@@ -4714,6 +4724,7 @@ layers:
                     colorized-icons:
                         size: 0px
                         text:
+                            visible: false
                             font:
                                 style: italic
         forest:
@@ -4726,7 +4737,7 @@ layers:
                     size: global.icon_size_green
                     sprite: forest
                     text:
-                        visible: global.text_visible_landuse_green
+                        visible: false
                         font:
                             fill: global.dark_color
                             style: italic
@@ -4738,7 +4749,7 @@ layers:
                     visible: global.icon_visible_landuse_green
                     size: global.icon_size_green
                     text:
-                        visible: global.text_visible_landuse_green
+                        visible: false
                         font:
                             fill: global.dark_color
         airport:
@@ -5202,7 +5213,7 @@ layers:
                     interactive: global.sdk_interactive
                     move_into_tile: true
                     priority: 100
-                    visible: global.text_visible_landuse_generic
+                    visible: false
                     font:
                         fill: global.mid_color
                         family: global.text_font_family
@@ -5222,7 +5233,7 @@ layers:
                 dots:
                     color: global.lighter_color
                     order: 18
-                    visible: true
+                    visible: false
             
             us_national_park:
                 # yosemite national park, death valley national park, grand canyon national park
@@ -5232,7 +5243,7 @@ layers:
                         - protect_class: ['2','3','5']
                 draw:
                     pixel-pattern-light:
-                        visible: true
+                        visible: false
 
         #tier2:
             # effectively wilderness
@@ -5259,7 +5270,7 @@ layers:
             draw:
                 pixel-pattern-bright:
                     color: global.lighter_color
-                    visible: true
+                    visible: false
 
         forest-landcover:
             filter:
@@ -5270,7 +5281,7 @@ layers:
                     - not: { operator: [ "United States Forest Service", "Forest Preserve District of Cook County" ] }
             draw:
                 pixel-pattern-light:
-                        visible: true
+                        visible: false
 
         parks-and-national-forests-not-national-park:
             filter:
@@ -5284,7 +5295,7 @@ layers:
             draw:
                 dots:
                     color: global.lighter_color
-                    visible: true
+                    visible: false
             national_park:
                 #filter: function() { return feature.name && (feature.name.indexOf('National Park') > -1); }
                 filter:
@@ -5295,7 +5306,7 @@ layers:
                         - not: { operator: [ "United States National Park Service", "Forest Preserve District of Cook County" ] }
                 draw:
                     pixel-pattern-light:
-                        visible: true
+                        visible: false
 
         # gotta be a protected area to draw green, not just a landcover type
         farm:
@@ -5305,7 +5316,7 @@ layers:
             draw:
                 tiny-dots:
                     color: global.offwhite_color
-                    visible: true
+                    visible: false
 
         #tier3:
         university:
@@ -5314,7 +5325,7 @@ layers:
             draw:
                 dots-rev:
                     color: global.lightest_color
-                    visible: true
+                    visible: false
         #tier4:
         cemetery:
             filter:
@@ -5322,55 +5333,56 @@ layers:
             draw:
                 tiny-dots:
                     color: global.lighter_color
-                    visible: true
+                    visible: false
         golf_course:
             filter:
                 kind: golf_course
             draw:
                 medium-dots:
                     color: global.lighter_color
-                    visible: true
+                    visible: false
         hospital:
             filter:
                 kind: hospital
             draw:
                 medium-dots:
                     color: global.lightest_color
-                    visible: true
+                    visible: false
         sports_centre:
             filter:
                 kind: sports_centre
             draw:
                 dots-rev-grid:
                     color: global.offwhite_color
+                    visible: false
         recreation_ground:
             filter:
                 kind: recreation_ground
             draw:
                 dots-rev-grid:
                     color: global.offwhite_color
-                    visible: true
+                    visible: false
         stadium:
             filter:
                 kind: stadium
             draw:
                 dots-rev-grid:
                     color: global.offwhite_color
-                    visible: true
+                    visible: false
         zoo:
             filter:
                 kind: [zoo, wildlife_park]
             draw:
                 tiny-dots:
                     color: global.offwhite_color
-                    visible: true
+                    visible: false
         winter_sports:
             filter:
                 kind: winter_sports
             draw:
                 polygons:
                     color: [[9, global.white_color], [20, global.offwhite_color]]
-                    visible: true
+                    visible: false
         man-made:
             filter: { kind: [pier,wastewater_plant,works,bridge,tower,breakwater,water_works,groyne,dike,cutline] }
             draw:
@@ -5419,7 +5431,7 @@ layers:
             draw:
                 tiny-dots:
                     color: global.light_color
-                    visible: true
+                    visible: false
         parking:
             filter:
                 all:
@@ -5431,13 +5443,13 @@ layers:
             draw:
                 horizontal-bars-rev:
                     color: global.ultralight_color
-                    visible: true
+                    visible: false
             early:
                 filter: { $zoom: { max: 15 } }
                 draw:
                     horizontal-bars-rev:
                         color: global.offwhite_color
-                        visible: true
+                        visible: false
         pedestrian:
             filter:
                 kind: [pedestrian,common]
@@ -5451,12 +5463,13 @@ layers:
                 draw:
                     dots:
                         color: global.lighter_color
+                        visible: false
         pitch:
             filter: { kind: pitch }
             draw:
                 tiny-dots:
                     color: global.lightest_color
-                    visible: true
+                    visible: false
                 outline:
                     style: lines
                     order: global.feature_order
@@ -5468,14 +5481,14 @@ layers:
             draw:
                 dots-rev:
                     color: global.ultralight_color
-                    visible: true
+                    visible: false
         school:
             filter:
                 kind: school
             draw:
                 dots-rev:
                     color: global.offwhite_color
-                    visible: true
+                    visible: false
         minor-landuse:
             filter:
                 kind:
@@ -5486,7 +5499,7 @@ layers:
             draw:
                 dots:
                     color: global.light_color
-                    visible: true
+                    visible: false
 
         landuse-not-filtered:
             # runways and taxiways are also in the roads layer as lines
