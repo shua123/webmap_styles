@@ -2092,19 +2092,19 @@ layers:
             filter: { kind: highway, $zoom: { min: 8 } }
             draw:
                 lines:
-                    color: [[8, global.black_color], [13, global.black_color], [14, global.white_color]]
+                    color: [[8, '#FFF'], [13, '#FFF'], [14, '#FFF']]
                     width: [[8, 1px], [13, 1.25px], [14, 0.1px], [15, 1.5px], [17, 8px], [18, 10m]]
                     outline:
-                        color: [[8, global.white_color], [12, global.white_color], [13, global.black_color]]
+                        color: [[8, '#CCC'], [12, '#CCC'], [13, '#CCC']]
                         width: [[8, 0px], [13, 0px], [14, 1px], [15, 2px], [19, 6px]]
             link:
                 filter: { is_link: true } # on- and off-ramps, etc
                 draw:
                     lines:
-                        color: [[9, global.mid_color], [13, global.mid_color], [14, global.white_color]]
+                        color: [[9, '#FFF'], [13, '#FFF'], [14, '#FFF']]
                         width: [[9, 0px], [13, 0.75px], [14, 0.1px], [17, 4px], [18, 5m]]
                         outline:
-                            color: [[9, global.white_color], [12, global.white_color], [13, global.mid_color], [15, global.black_color]]
+                            color: [[9, '#CCC'], [12, '#CCC'], [13, '#CCC'], [15, '#CCC']]
                             width: [[9, 0px], [13, 0px], [14, 0.4px], [17, 1.5px], [18, 2px]]
                 early_link:
                     filter: { $zoom: {min: 13, max: 15} }
@@ -2115,16 +2115,16 @@ layers:
                     filter: {is_tunnel: true, $zoom: { min: 13 } }
                     draw:
                         lines:
-                            color: [[13, global.light_color], [14, global.ultralight_color]]
+                            color: [[13, '#FFF'], [14, '#FFF']]
                             outline:
-                                color: [[12, global.white_color], [13, global.light_color]]
+                                color: [[12, '#CCC'], [13, '#CCC']]
             tunnel:
                 filter: { is_tunnel: true, $zoom: { min: 13 } }
                 draw:
                     lines:
-                        color: [[13, global.light_color], [14, global.ultralight_color]]
+                        color: [[13, '#FFF'], [14, '#FFF']]
                         outline:
-                            color: [[12, global.white_color], [13, global.light_color]]
+                            color: [[12, '#CCC'], [13, '#CCC']]
             highway_bridge:
                 filter: { is_bridge: true }
                 draw:
