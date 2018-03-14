@@ -2093,7 +2093,7 @@ layers:
             draw:
                 lines:
                     color: [[5, '#FFF'], [18, '#FFF']]
-                    width: [[5, 0.75px], [18, 10px]]
+                    width: [[5, 0.75px], [10, 2.25px], [18, 5px]]
                     outline:
                         color: [[7, '#CCC'], [10, '#CCC'], [16, '#CCC']]
                         width: [[7, 0.5px], [10, 1px], [16, 2px]]
@@ -2162,19 +2162,19 @@ layers:
             # default style
             draw:
                 lines:
-                    color: [[8, global.black_color], [13, global.black_color], [17, global.white_color]]
-                    width: [[13, 1px], [14, 1px], [16, 2.5px], [17, 3px]]
+                    color: [[8, '#FFF'], [13, '#FFF'], [17, '#FFF']]
+                    width: [[5, 0.5px], [10, 1.5px], [18, 3px]]
                     outline:
-                        width: [[12, 0px], [13, .5px], [15, 1px], [17, 2px]]
+                        width: [[7, 0px], [10, .5px], [16, 1.25px]]
             trunk_primary:
                 filter: { kind_detail: [trunk, primary] }
                 draw:
                     lines:
-                        color: [[8, global.midlight_color], [12, global.mid_color], [13, global.black_color], [14, global.white_color]]
-                        width: [[8, 0.5px], [11, 0.5px], [13, 1px], [14, 0.1px], [16, 2px], [17, 8px], [18, 10m]]
+                        color: [[8, '#FFF'], [12, '#FFF'], [13, '#FFF'], [14, '#FFF']]
+                        width: [[5, 0.5px], [10, 1.5px], [18, 3px]]
                         outline:
-                            color: [[8, global.white_color], [12, global.white_color], [13, global.black_color]]
-                            width: [[8, 0px], [13, 0px], [14, 0.75px], [16, 1.5px], [18, 4px]]
+                            color: [[8, '#CCC'], [12, '#CCC'], [13, '#CCC']]
+                            width: [[7, 0px], [10, .5px], [16, 1.25px]]
                 early:
                     filter: { $zoom: { max: 16 } }
                     draw:
@@ -2192,11 +2192,11 @@ layers:
                     filter: { ref: true }
                     draw:
                         lines:
-                            color: [[8, global.midlight_color], [12, global.mid_color], [13, global.black_color], [14, global.white_color]]
-                            width: [[9, 0.5px], [13, 1px], [14, 0.1px], [15, 1.25px], [16, 2px], [17, 8px], [18, 10m]]
+                            color: [[8, '#FFF'], [12, '#FFF'], [13, '#FFF'], [14, '#FFF']]
+                            width: [[5, 0.5px], [10, 1.5px], [18, 3px]]
                             outline:
-                                color: [[8, global.white_color], [12, global.white_color], [13, global.black_color]]
-                                width: [[8, 0px], [13, 0px], [14, 0.75px], [15, 1.5px], [17, 3px], [18, 4px]]
+                                color: [[8, '#CCC'], [12, '#CCC'], [13, '#CCC']]
+                                width: [[7, 0px], [10, .5px], [16, 1.25px]]
                     early:
                         filter: { $zoom: { max: 16 } }
                         draw:
@@ -2208,9 +2208,9 @@ layers:
                         filter: { is_tunnel: true, $zoom: { min: 13 } }
                         draw:
                             lines:
-                                color: [[13, global.light_color], [14, global.ultralight_color]]
+                                color: [[13, '#FFF'], [14, '#FFF']]
                                 outline:
-                                    color: [[12, global.white_color], [13, global.light_color]]
+                                    color: [[12, '#CCC'], [13, '#CCC']]
                     labels-trunk_primary-route-z13-z14:
                         filter: { $zoom: [13,14] }
                         draw:
@@ -2262,26 +2262,26 @@ layers:
                 filter: { is_link: true } # on- and off-ramps, etc
                 draw:
                     lines:
-                        color: [[10, global.mid_color], [15, global.light_color], [16, global.white_color]]
+                        color: [[10, '#FFF'], [15, '#FFF'], [16, '#FFF']]
                         width: [[10, 0.5px], [12, 0.5px], [15, 1px], [16, 1.75px], [17, 3px], [18, 5m]]
                         outline:
-                            color: [[10, global.white_color], [15, global.mid_color], [16, global.black_color]]
+                            color: [[10, '#CCC'], [15, '#CCC'], [16, '#CCC']]
                             width: [[10, 0px], [15, 0px], [16, 1px], [18, 2px]]
             tunnel:
                 filter: { is_tunnel: true, $zoom: { min: 13 } }
                 draw:
                     lines:
-                        color: [[13, global.light_color], [14, global.ultralight_color]]
+                        color: [[13, '#FFF'], [14, '#FFF']]
                         outline:
-                            color: [[12, global.white_color], [13, global.light_color]]
+                            color: [[12, '#CCC'], [13, '#CCC']]
             secondary:
                 filter: { kind_detail: secondary }
                 draw:
                     lines:
-                        color: [[10, global.lighter_color], [13, global.midlight_color], [15, global.dark_color], [16, global.white_color]]
+                        color: [[10, '#FFF'], [13, '#FFF'], [15, '#FFF'], [16, '#FFF']]
                         width: [[10, 0.5px], [12, 0.5px], [14, 1px], [15, 1.5px], [16, 0.1px], [17, 7.5px], [18, 9m]]
                         outline:
-                            color: [[10, global.white_color], [14, global.white_color], [15, global.black_color]]
+                            color: [[10, '#CCC'], [14, '#CCC'], [15, '#CCC']]
                             width: [[10, 0px], [15, 0px], [16, 1.1px], [17, 2px]]
                 early:
                     filter: { $zoom: { max: 16 } }
@@ -2294,10 +2294,10 @@ layers:
                     filter: { ref: true, $zoom: { min: 12 } }
                     draw:
                         lines:
-                            color: [[10, global.lighter_color], [13, global.mid_color], [15, global.black_color], [16, global.white_color]]
+                            color: [[10, '#FFF'], [13, '#FFF'], [15, '#FFF'], [16, '#FFF']]
                             width: [[10, 0.5px], [13, 1px], [15, 1.5px], [16, 0.1px], [17, 7.5px], [18, 9m]]
                             outline:
-                                color: [[10, global.white_color], [14, global.white_color], [15, global.black_color]]
+                                color: [[10, '#CCC'], [14, '#CCC'], [15, '#CCC']]
                                 width: [[10, 0px], [15, 0px], [16, 1.5px], [17, 2px]]
                     early:
                         filter: { $zoom: { max: 15 } }
@@ -2310,9 +2310,9 @@ layers:
                         filter: {is_tunnel: true, $zoom: { min: 13 } }
                         draw:
                             lines:
-                                color: [[13, global.light_color], [15, global.light_color], [16, global.ultralight_color]]
+                                color: [[13, '#FFF'], [15, '#FFF'], [16, '#FFF']]
                                 outline:
-                                    color: [[13, global.white_color], [14, global.white_color], [15, global.light_color]]
+                                    color: [[13, '#CCC'], [14, '#CCC'], [15, '#CCC']]
                     labels-secondary-routes-z13-z14:
                         filter: { $zoom: [13,14] }
                         draw:
@@ -2351,10 +2351,10 @@ layers:
                 filter: { kind_detail: [tertiary, tertiary_link] }
                 draw:
                     lines:
-                        color: [[11, global.lighter_color], [15, global.dark_color], [16, global.white_color]]
+                        color: [[11, '#FFF'], [15, '#FFF'], [16, '#FFF']]
                         width: [[11, 0.5px], [15, 1.25px], [16, 0.1px], [17, 6px], [18, 9m]]
                         outline:
-                            color: [[11, global.white_color], [14, global.white_color], [15, global.black_color]]
+                            color: [[11, '#CCC'], [14, '#CCC'], [15, '#CCC']]
                             width: [[11, 0px], [15, 0px], [16, 1px], [17, 2px], [18, 2px]]
                 early:
                     filter: { $zoom: { max: 15 } }
@@ -2367,10 +2367,10 @@ layers:
                     filter: { ref: true, $zoom: { min: 12} }
                     draw:
                         lines:
-                            color: [[11, global.lighter_color], [15, global.dark_color], [16, global.white_color]]
+                            color: [[11, '#FFF'], [15, '#FFF'], [16, '#FFF']]
                             width: [[11, 0.5px], [15, 1.25px], [16, 0.1px], [17, 6px], [18, 9m]]
                             outline:
-                                color: [[11, global.white_color], [14, global.white_color], [15, global.black_color]]
+                                color: [[11, '#CCC'], [14, '#CCC'], [15, '#CCC']]
                                 width: [[11, 0px], [15, 0px], [16, 1px], [17, 2px], [18, 2px]]
                     early:
                         filter: { $zoom: { max: 15 } }
@@ -2383,17 +2383,17 @@ layers:
                         filter: { is_tunnel: true, $zoom: { min: 13 } }
                         draw:
                             lines:
-                                color: [[13, global.light_color], [15, global.light_color], [16, global.ultralight_color]]
+                                color: [[13, '#FFF'], [15, '#FFF'], [16, '#FFF']]
                                 outline:
-                                    color: [[13, global.white_color], [14, global.white_color], [15, global.light_color]]
+                                    color: [[13, '#CCC'], [14, '#CCC'], [15, '#CCC']]
                 link:
                     filter: { is_link: true } # on- and off-ramps, etc
                     draw:
                         lines:
-                            color: [[14, global.light_color], [15, global.dark_color], [16, global.white_color]]
+                            color: [[14, '#FFF'], [15, '#FFF'], [16, '#FFF']]
                             width: [[11, 0.0px], [15, 0.5px], [16, 0.1px], [18, 4.5m]]
                             outline:
-                                color: [[11, global.white_color], [14, global.white_color], [15, global.black_color]]
+                                color: [[11, '#CCC'], [14, '#CCC'], [15, '#CCC']]
                                 width: [[11, 0px], [14, 0px], [16, 0.25px], [18, 2px]]
                 labels-tertiary:
                     filter: { $zoom: { min: 13 } }
@@ -2410,10 +2410,10 @@ layers:
             filter: { kind: minor_road, not: { kind_detail: service }, $zoom: { min: 8 } }
             draw:
                 lines:
-                    color: [[11, global.offwhite_color], [15, global.midlight_color], [16, global.white_color]]
+                    color: [[11, '#FFF'], [15, '#FFF'], [16, '#FFF']]
                     width: [[11, 0.35px], [13, 0.5px], [14, 1px], [15, 1px], [16, 0.1px], [17, 3.5px], [18, 9m]]
                     outline:
-                        color: [[11, global.white_color], [14, global.white_color], [15, global.midlight_color], [17, global.black_color]]
+                        color: [[11, '#CCC'], [14, '#CCC'], [15, '#CCC'], [17, '#CCC']]
                         width: [[11, 0px], [15, 0px], [16, 0.75px], [17, 1.5px], [18, 1.5px]]
             early:
                 filter: { $zoom: { max: 16 } }
@@ -2434,9 +2434,9 @@ layers:
                 filter: {is_tunnel: true, $zoom: { min: 13 } }
                 draw:
                     lines:
-                        color: [[13, global.light_color], [15, global.light_color], [16, global.ultralight_color]]
+                        color: [[13, '#FFF'], [15, '#FFF'], [16, '#FFF']]
                         outline:
-                            color: [[13, global.white_color], [14, global.white_color], [15, global.light_color]]
+                            color: [[13, '#CCC'], [14, '#CCC'], [15, '#CCC']]
             minor_road_bridge:
                 filter: { is_bridge: true }
                 draw:
