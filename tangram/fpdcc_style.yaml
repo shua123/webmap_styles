@@ -1268,7 +1268,7 @@ layers:
         draw:
              points:
                   order: 183
-                  sprite: fpdcc-parking-icon-gray
+                  sprite: toys
                   size: 32px
     
     fpdcc_boundaries:
