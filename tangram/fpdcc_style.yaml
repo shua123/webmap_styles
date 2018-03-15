@@ -1269,7 +1269,7 @@ layers:
             points:
                 order: 183
                 color: '#A5A498'
-                width: [[0,0px],[14,0px],[15,15px],[17,20px],[18,25px]]
+                size: [[0,0px],[14,0px],[15,15px],[17,20px],[18,25px]]
                 text:
                     anchor: [center, center, center, center]
                     font:
