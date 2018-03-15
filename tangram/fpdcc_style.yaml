@@ -1273,7 +1273,7 @@ layers:
                     font:
                         fill: '#FFF'
                         size: 10px
-                        anchor: [center,center,center]
+                        anchor: [center,center,center,center]
     
     fpdcc_boundaries:
         data: {source: fpdcc}
