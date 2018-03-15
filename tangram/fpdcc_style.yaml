@@ -1273,7 +1273,7 @@ layers:
                 text:
                     anchor: [center, center, center, center]
                     text_source: fpdccBasemap
-                    offset: [[0, [0, 0]], [15, [0, 0]], [16, [0, -1px]], [17, [0, -1px]], [18, [0, -3px]], [19, [0, -5px]], [20, [0, -7px]]]
+                    offset: [[0, [0, 0]], [15, [0, 0]], [16, [0, -1px]], [17, [0, -1px]], [18, [0, -2px]], [19, [0, -3px]], [20, [0, -4px]]]
                     font:
                         fill: '#FFF'
                         size: [[0,0px],[15,0px],[16,11px],[17,16px],[18,21px],[19,26px],[20,34px]]
