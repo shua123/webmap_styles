@@ -1266,10 +1266,13 @@ layers:
     fpdcc_parking_icons:
         data: {source: fpdcc_parking_icons}
         draw:
-            custom:
+            points:
                 order: 183
-                color: blue
-                texture: https://raw.githubusercontent.com/versatilehuman/webmap_styles/master/tangram/images/parking-gray.png
+                color: '#A5A498'
+                text:
+                    font:
+                        fill: '#FFF'
+                        size: 10px
     
     fpdcc_boundaries:
         data: {source: fpdcc}
