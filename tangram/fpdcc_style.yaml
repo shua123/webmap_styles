@@ -1261,14 +1261,15 @@ layers:
         draw:
             polygons:
                 order: 182
-                color: [0.965, 0.965, 0.965, 0.50]
+                color: '#D9D9D9'
                 
     fpdcc_parking_icons:
         data: {source: fpdcc_parking_icons}
         draw:
-             colorized-icons:
+             points:
                   order: 183
                   sprite: fpdcc-parking-icon-gray
+                  size: 32px
     
     fpdcc_boundaries:
         data: {source: fpdcc}
