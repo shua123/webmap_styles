@@ -1275,9 +1275,9 @@ layers:
                     text_source: fpdccBasemap
                     font:
                         fill: '#FFF'
-                        size: [[0,0px],[15,0px],[16,11px],[17,16px],[18,21px],[19,31px]]
+                        size: [[0,0px],[15,0px],[16,11px],[17,16px],[18,21px],[19,26px],[20,31px]]
                         weight: bold
-                        offset: [[0, [0, 0]], [15, [0, 0]], [16, [0, -1px]], [17, [0, -1px]], [18, [0, -1.5px]], [19, [0, -2px]], [20, [0, -2.5px]]]
+                        offset: [[0, [0, 0]], [15, [0, 0]], [16, [0, -1px]], [17, [0, -1px]], [18, [0, -2.25px]], [19, [0, -2.75px]], [20, [0, -3.25px]]]
                         
     fpdcc_boundaries:
         data: {source: fpdcc}
