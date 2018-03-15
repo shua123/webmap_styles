@@ -707,6 +707,13 @@ textures:
         url: images/building-grid.gif
         filtering: mipmap
 
+    parking:
+        url: https://raw.githubusercontent.com/versatilehuman/webmap_styles/master/tangram/images/parking-gray.png
+       # filtering: mipmap
+        sprites:
+            # define sprites: [x origin, y origin, width, height]
+            fpdcc-parking-icon-gray: [0, 0, 612, 612]
+
 sources:
     fpdcc_nature_preserves:
         type: GeoJSON
@@ -1254,17 +1261,24 @@ layers:
         draw:
             polygons:
                 order: 182
-                color: [0.965, 0.965, 0.965, 0.50]
+                color: '#D9D9D9'
                 
     fpdcc_parking_icons:
         data: {source: fpdcc_parking_icons}
         draw:
             points:
-                order: 1
-                #url: https://gist.github.com/glw/2c4e310cdf26f4b1714d7ba319c71eb8/raw/f0db4affb364ed9f0ed2df5809ea6ff2c81e515f/fpdcc_parking.png
-                # define sprites: [x origin, y origin, width, height]
-                color: [0.039, 0.004, 0.435, 0.50]
-    
+                order: 183
+                color: '#A5A498'
+                size: [[0,0px],[15,0px],[16,15px],[17,20px],[18,25px],[19,30px],[20,40px]]
+                text:
+                    anchor: [center, center, center, center]
+                    text_source: fpdccBasemap
+                    offset: [[0, [0, 0]], [15, [0, 0]], [16, [0, -1px]], [17, [0, -1px]], [18, [0, -2px]], [19, [0, -3px]], [20, [0, -4px]]]
+                    font:
+                        fill: '#FFF'
+                        size: [[0,0px],[15,0px],[16,11px],[17,16px],[18,21px],[19,26px],[20,34px]]
+                        weight: bold
+                        
     fpdcc_boundaries:
         data: {source: fpdcc}
         draw:
@@ -2628,7 +2642,7 @@ layers:
         shields:
             filter:
                 all:
-                    - $zoom: { min: 6 }
+                    - $zoom: { min: 12 }
                     #
                     # United State looks great with shield_text alone, but...
                     #
