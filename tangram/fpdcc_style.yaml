@@ -2642,7 +2642,7 @@ layers:
         shields:
             filter:
                 all:
-                    - $zoom: { min: 6 }
+                    - $zoom: { min: 12 }
                     #
                     # United State looks great with shield_text alone, but...
                     #
