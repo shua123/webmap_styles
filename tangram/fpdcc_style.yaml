@@ -328,11 +328,11 @@ global:
 
     # areas:
     scene1:      white                    # map background
-    water1:      [0.584, 0.898, 0.976, 1.00]    # water wave
-    water2:      [0.584, 0.898, 0.976, 1.00]    # water wave
-    water3:      [0.584, 0.898, 0.976, 1.00]    # playa texture
-    water1_o:    [0.584, 0.898, 0.976, 1.00]    # water stroke (ocean coastline)
-    water2_o:    [0.584, 0.898, 0.976, 1.00]    # water stroke 2 (streams, lake outlines)
+    water1:      '#8BD1E3'    # water wave
+    water2:      '#8BD1E3'    # water wave
+    water3:      '#8BD1E3'    # playa texture
+    water1_o:    '#8BD1E3'    # water stroke (ocean coastline)
+    water2_o:    '#8BD1E3'    # water stroke 2 (streams, lake outlines)
     earth1:      white                    # land color
     earth2:      '#e9e4e0'                # urban
     earth2_v:    false                    # urban
