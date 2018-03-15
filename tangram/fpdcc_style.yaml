@@ -1267,7 +1267,7 @@ layers:
         data: {source: fpdcc_parking_icons}
         draw:
              colorized-icons:
-                  size: [[4,5px],[8,6px],[9,0px]]
+                  order: 183
                   sprite: fpdcc-parking-icon-gray
     
     fpdcc_boundaries:
