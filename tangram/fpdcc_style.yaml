@@ -1591,6 +1591,7 @@ layers:
             draw:
                 polygons:
                     color: '#8BD1E3'
+                    order: global.feature_order
         playas:
             filter: { kind: playa }
             draw:
@@ -1601,6 +1602,7 @@ layers:
             filter: { kind: swimming_pool }
             draw:
                 polygons:
+                    visible: false
                     color: '#8BD1E3'
         water-boundary-ocean:
             filter: { boundary: true, kind: ocean, $zoom: { min: 1 } }
