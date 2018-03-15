@@ -1559,7 +1559,7 @@ layers:
         new_lakes:
             filter:
                 all:
-                    - kind: [ocean, lake, water, riverbank, reservoir, swimming_pool]
+                    - kind: [ocean, lake, reservoir, swimming_pool]
                 any:
                     # limit show smaller landuse areas to higher zooms
                     - { $zoom: { min: 1 },  area: { min: 10000000000 } }
