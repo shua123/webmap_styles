@@ -1548,12 +1548,12 @@ layers:
                 visible: true
                 order: global.sdk_order_under_roads_0
                 color: '#8BD1E3' # colors the wave lines
-    new_later:
-        filter: { $zoom: { min: 12 } }
-        draw:
-            polygons:
-                order: global.sdk_order_under_roads_0
-                color: '#8BD1E3' # colors the wave lines
+  #  new_later:
+  #      filter: { $zoom: { min: 12 } }
+  #      draw:
+  #          polygons:
+  #              order: global.sdk_order_under_roads_0
+  #              color: '#8BD1E3' # colors the wave lines
 
 
         new_lakes:
