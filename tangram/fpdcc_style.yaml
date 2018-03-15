@@ -1645,13 +1645,6 @@ layers:
                     color: '#8BD1E3'
                     width: [[14, 0.5px], [15, 2px], [17, 6px],[ 18, 8px]]
                     cap: round
-        new_stream:
-            #river center lines, not boundaries for polygons
-            filter: { kind: [canal,stream,dam,ditch,drain], $zoom: { min: 14 }, not: { is_tunnel: true } }
-            draw:
-                coast:
-                    color: '#8BD1E3'
-                    width: [[9, 0px], [11, 1px], [14, 2px], [15, 4px]]
 
         water-area-labels:
             filter:
