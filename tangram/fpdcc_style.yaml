@@ -1266,11 +1266,10 @@ layers:
     fpdcc_parking_icons:
         data: {source: fpdcc_parking_icons}
         draw:
-             points:
-                  order: 183
-                  sprite: toys
-                  color: red
-                  size: 32px
+            custom:
+                order: 183
+                color: blue
+                texture: https://raw.githubusercontent.com/versatilehuman/webmap_styles/master/tangram/images/parking-gray.png
     
     fpdcc_boundaries:
         data: {source: fpdcc}
