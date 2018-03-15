@@ -712,7 +712,7 @@ textures:
        # filtering: mipmap
         sprites:
             # define sprites: [x origin, y origin, width, height]
-            'fpdcc-parking-icon-gray': [0, 0, 612, 612]
+            fpdcc-parking-icon-gray: [0, 0, 612, 612]
 
 sources:
     fpdcc_nature_preserves:
@@ -1266,11 +1266,9 @@ layers:
     fpdcc_parking_icons:
         data: {source: fpdcc_parking_icons}
         draw:
-            points:
-                order: 1
-                #url: https://gist.github.com/glw/2c4e310cdf26f4b1714d7ba319c71eb8/raw/f0db4affb364ed9f0ed2df5809ea6ff2c81e515f/fpdcc_parking.png
-                # define sprites: [x origin, y origin, width, height]
-                color: [0.039, 0.004, 0.435, 0.50]
+             colorized-icons:
+                  size: [[4,5px],[8,6px],[9,0px]]
+                  sprite: fpdcc-parking-icon-gray
     
     fpdcc_boundaries:
         data: {source: fpdcc}
