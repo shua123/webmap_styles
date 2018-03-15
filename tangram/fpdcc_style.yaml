@@ -1269,13 +1269,14 @@ layers:
             points:
                 order: 183
                 color: '#A5A498'
-                size: [[0,0px],[14,0px],[15,15px],[17,20px],[18,25px]]
+                size: [[0,0px],[15,0px],[16,15px],[17,20px],[18,25px],[19,30px],[20,35px]]
                 text:
                     anchor: [center, center, center, center]
                     font:
                         fill: '#FFF'
-                        size: [[0,0px],[14,0px],[15,11px],[17,16px],[18,21px]]
+                        size: [[0,0px],[15,0px],[16,11px],[17,16px],[18,21px],[19,31px]]
                         weight: bold
+                        offset: [[0, [0, 0]], [15, [0, 0]], [16, [0, -1px]], [17, [0, -1px]], [18, [0, -1.5px]], [19, [0, -2px]], [20, [0, -2.5px]]]
                         
     fpdcc_boundaries:
         data: {source: fpdcc}
