@@ -1269,6 +1269,7 @@ layers:
         draw:
             points:
                 order: 183
+                collide: false 
                 color: '#A5A498'
                 size: [[0,0px],[15,0px],[16,15px],[17,20px],[18,25px],[19,30px],[20,40px]]
                 text:
