@@ -2843,7 +2843,7 @@ layers:
                             text:
                                 offset: [0px, 0.5px]
                                 font:
-                                    # fill: global.black_color
+                                    fill: '#444'
                                     size: [[7,8px],[13,9px],[15,11px]]
                     width_1char:
                         filter: function() { return (feature.shield_text.length === 1) }
@@ -2886,7 +2886,7 @@ layers:
                             text:
                                 offset: [0px, -0.7px]
                                 font:
-                                    # fill: global.black_color
+                                    fill: '#444'
                                     size: [[7,8px],[13,9px],[15,11px]]
                     # early:
                     #     filter: { $zoom: [7] }
@@ -3195,10 +3195,10 @@ layers:
             filter: { kind: path, kind_detail: pier }
             draw:
                 lines:
-                    color: global.offwhite_color
+                    color: '#FFF'
                     width: [[13, 0px], [14, 0.5px],[15, 1.5px], [16, 2.5px],[17, 3px],[18, 3m]]
                     outline:
-                        color: global.mid_color
+                        color: '#FFF'
                         width: [[15, 0px],[16,0.65px], [17, 0.75px], [18, 1px], [19, 1.5px]]
         racetrack:
             filter: { kind: racetrack }
