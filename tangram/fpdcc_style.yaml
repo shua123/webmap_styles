@@ -5265,7 +5265,7 @@ layers:
                     - kind: [protected_area, nature_reserve, national_park]
                 any:
                     - protect_class: ['2','3','5']
-                    - not: { operator: { "Forest Preserve District of Cook County" } }
+                    - not: { operator: [ "Forest Preserve District of Cook County" ] }
             draw:
                 pixel-pattern-light:
                     color: global.white_color
