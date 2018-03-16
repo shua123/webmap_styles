@@ -422,7 +422,6 @@ global:
 
 textures:
     pois:
-        url: images/refill@2x.png
         filtering: mipmap
         sprites:
             # define sprites: [x origin, y origin, width, height]
