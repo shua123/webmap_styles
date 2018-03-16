@@ -998,8 +998,8 @@ styles:
 
     railway_dash:
         base: lines
-        dash: [1.0, 1.0]
-        dash_background_color: '#E6E6E6'
+        dash: [0.25, 1.0]
+        dash_background_color: global.offwhite_color
 
     pixel-pattern-light:
         mix: [space-tile, generative-random]
@@ -1257,6 +1257,7 @@ layers:
                 color: '#92DC97'
     
     fpdcc_parking_geometry:
+        filter: { $zoom: { min: 14 } }
         data: {source: fpdcc_parking_geometry}
         draw:
             polygons:
@@ -1268,6 +1269,7 @@ layers:
         draw:
             points:
                 order: 183
+                collide: false 
                 color: '#A5A498'
                 size: [[0,0px],[15,0px],[16,15px],[17,20px],[18,25px],[19,30px],[20,40px]]
                 text:
@@ -3342,7 +3344,6 @@ layers:
                 filter: { service: true }
                 draw:
                     lines:
-                        color: global.light_color
                         width: [[14,0px],[15,0.5px],[16,0.75px],[17,1px],[18,1px]]
 
     buildings:
@@ -3855,7 +3856,7 @@ layers:
                         visible: global.text_visible_populated_places
 
             _text_early:
-                filter: { $zoom: { max: 11 } }
+                filter: { $zoom: { max: 6 } }
                 draw:
                     text-blend-order:
                         visible: false
@@ -3984,6 +3985,7 @@ layers:
                         priority: 9
                         font:
                             size: [[4,10px],[6,14px],[8,15px],[12,18px],[13,0px]]
+                            fill: '#333'
                 capital:
                     # we only want townspots to show as capital dots starting at zoom 5
                     filter: { country_capital: true, $zoom: { min: 5 } }
@@ -4009,6 +4011,7 @@ layers:
                         priority: 11
                         font:
                             size: [[5,10px],[8,12px],[10,14px],[12,16px],[13,0px]]
+                            fill: '#666'
                 capital:
                     filter: { country_capital: true, $zoom: { min: 5 } }
                     draw:
@@ -4030,6 +4033,7 @@ layers:
                         text:
                             font:
                                 size: [[6,10px],[8,14px],[10,15px],[12,16px],[13,0px]]
+                                fill: '#666'
                     text-blend-order:
                         priority: 13
                         font:
@@ -4058,6 +4062,7 @@ layers:
                         priority: 15
                         font:
                             size: [[6,10px],[8,12px],[14,14px],[15,0px]]
+                            fill: '#666'
                 capital:
                     filter: { country_capital: true, $zoom: { min: 5 } }
                     draw:
@@ -4082,6 +4087,7 @@ layers:
                         priority: 17
                         font:
                             size: [[6,10px],[8,12px],[14,14px],[15,0px]]
+                            fill: '#888'
                 capital:
                     filter: { country_capital: true, $zoom: { min: 5 } }
                     draw:
@@ -4106,6 +4112,7 @@ layers:
                         priority: 19
                         font:
                             size: [[9,10px],[14,12px],[15,0px]]
+                            fill: '#888'
                 capital:
                     filter: { country_capital: true, $zoom: { min: 5 } }
                     draw:
@@ -4130,7 +4137,7 @@ layers:
                     text-blend-order:
                         priority: 21
                         font:
-                            fill: [[9, global.dark_color], [11, global.black_color]]
+                            fill: '#888'
                             size: [[9, 10px],[14, 12px],[15, 0px]]
                 capital:
                     filter: { country_capital: true, $zoom: { min: 5 } }
@@ -4156,7 +4163,7 @@ layers:
                     text-blend-order:
                         priority: 23
                         font:
-                            fill: [[9, global.dark_color], [11, global.black_color]]
+                            fill: '#888'
                             size: [[9,10px], [14,12px], [15,0px]]
                 capital:
                     filter: { country_capital: true, $zoom: { min: 5 } }
@@ -4182,7 +4189,7 @@ layers:
                     text-blend-order:
                         priority: 25
                         font:
-                            fill: [[9, global.dark_color],[11, global.black_color]]
+                            fill: '#888'
                             size: [[9,10px], [14,12px], [15,0px]]
                 capital:
                     filter: { country_capital: true, $zoom: { min: 5 } }
@@ -4208,7 +4215,7 @@ layers:
                     text-blend-order:
                         priority: 27
                         font:
-                            fill: [[9, global.dark_color], [11, global.black_color]]
+                            fill: '#888'
                             size: [[9, 10px], [14, 12px], [15, 0px]]
                 capital:
                     filter: { country_capital: true, $zoom: { min: 5 } }
@@ -4234,7 +4241,7 @@ layers:
                     text-blend-order:
                         priority: 28
                         font:
-                            fill: [[9, global.dark_color],[11, global.black_color]]
+                            fill: '#888'
                             size: [[9, 10px], [14, 11px], [15, 0px]]
                 capital:
                     filter: { country_capital: true, $zoom: { min: 5 } }
@@ -4253,7 +4260,7 @@ layers:
                     - macrohood
                     - neighbourhood
                     - borough
-                $zoom: { min: 10 }
+                $zoom: { max: 16 }
                 is_landuse_aoi: false
             draw:
                 text-blend-order:
