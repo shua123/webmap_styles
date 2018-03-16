@@ -2146,7 +2146,7 @@ layers:
                         visible: global.text_visible_highway
                         text_source: global.ux_language_text_source_road_ref_and_name
                         font:
-                            fill: global.black_color
+                            fill: '#333'
                             weight: 600
                             size: 11px
                             stroke: { color: global.white_color, width: 4 }
@@ -2157,7 +2157,7 @@ layers:
                         priority: 50
                         visible: global.text_visible_highway
                         font:
-                            fill: global.white_color
+                            fill: '#333'
                             weight: 600
                             size: [[15, 12px], [19, 16px]]
                             stroke: { color: global.black_color, width: [[15, 3], [17, 4]] }
@@ -2224,7 +2224,7 @@ layers:
                                 visible: global.text_visible_trunk_primary
                                 text_source: global.ux_language_text_source_road_ref_and_name
                                 font:
-                                    fill: global.dark_color
+                                    fill: '#333'
                                     size: 11px
                                     stroke: { color: global.white_color, width: 3 }
                     labels-trunk_primary-route-z15-up:
@@ -2235,7 +2235,7 @@ layers:
                                 visible: global.text_visible_trunk_primary
                                 text_source: global.ux_language_text_source_road_ref_and_name
                                 font:
-                                    fill: global.black_color
+                                    fill: '#333'
                                     weight: 600
                                     size: [[15, 12px], [16, 13px], [19, 16px]]
                                     stroke: { color: global.white_color, width: [[15, 3], [17, 6]] }
@@ -2248,7 +2248,7 @@ layers:
                             visible: global.text_visible_trunk_primary
                             text_source: global.ux_language_text_source_road_ref_and_name_short
                             font:
-                                fill: global.dark_color
+                                fill: '#333'
                                 size: [[11, 10px], [15, 12px]]
                                 stroke: { color: global.white_color, width: [[11, 3], [13, 3], [14, 4]] }
                 labels-trunk_primary-z16-up:
@@ -2259,7 +2259,7 @@ layers:
                             visible: global.text_visible_trunk_primary
                             text_source: global.ux_language_text_source_road_ref_and_name
                             font:
-                                fill: [[16, global.dark_color], [18, global.black_color]]
+                                fill: '#333'
                                 weight: 600
                                 size: [[16, 13px], [18, 13px], [19, 16px]]
                                 stroke: { color: global.white_color, width: [[16, 4], [17, 6]]}
@@ -2326,7 +2326,7 @@ layers:
                                 visible: global.text_visible_secondary
                                 text_source: global.ux_language_text_source_road_ref_and_name_short
                                 font:
-                                    fill: global.black_color
+                                    fill: '#333'
                                     size: 11px
                                     stroke: { color: global.white_color, width: 4 }
                     labels-secondary-routes-z15-up:
@@ -2337,7 +2337,7 @@ layers:
                                 visible: global.text_visible_secondary
                                 text_source: global.ux_language_text_source_road_ref_and_name_short
                                 font:
-                                    fill: global.black_color
+                                    fill: '#333'
                                     weight: 600
                                     size: [[15, 11px], [17, 13px]]
                                     stroke: { color: global.white_color, width: 4 }
@@ -2349,7 +2349,7 @@ layers:
                             visible: global.text_visible_secondary
                             text_source: global.ux_language_text_source_road_ref_and_name_short
                             font:
-                                fill: [[13, global.dark_color], [17, global.black_color]]
+                                fill: '#333'
                                 size: [[13, 10px], [17, 13px]]
                                 stroke: { color: global.white_color, width: 4 }
             tertiary:
@@ -2408,7 +2408,7 @@ layers:
                             visible: global.text_visible_tertiary
                             text_source: global.ux_language_text_source_road_ref_and_name_short
                             font:
-                                fill: [[13, global.dark_color], [18, global.black_color]]
+                                fill: '#666'
                                 size: [[13, 10px], [17, 13px]]
                                 stroke: { color: global.white_color, width: 4 }
         minor_road:
@@ -2457,7 +2457,7 @@ layers:
                         visible: global.text_visible_minor_road
                         text_source: name
                         font:
-                            fill: [[15, global.mid_color], [18, global.black_color]]
+                            fill: '#666'
                             size: [[15, 10px], [18, 13px]]
                             stroke: { color: global.white_color, width: 4 }
         service_road:
@@ -3950,7 +3950,7 @@ layers:
                     text-blend-order:
                         priority: 9
                         font:
-                            size: [[4,10px],[6,14px],[8,15px],[12,18px],[13,0px]]
+                            size: [[4,11px],[6,16px],[8,17px],[12,20px],[13,0px]]
                             fill: '#333'
                 capital:
                     # we only want townspots to show as capital dots starting at zoom 5
@@ -3976,7 +3976,7 @@ layers:
                     text-blend-order:
                         priority: 11
                         font:
-                            size: [[5,10px],[8,12px],[10,14px],[12,16px],[13,0px]]
+                            size: [[5,12px],[8,14px],[10,16px],[12,18px],[13,0px]]
                             fill: '#666'
                 capital:
                     filter: { country_capital: true, $zoom: { min: 5 } }
@@ -4003,7 +4003,7 @@ layers:
                     text-blend-order:
                         priority: 13
                         font:
-                            size: [[6,10px],[8,14px],[10,15px],[12,16px],[13,0px]]
+                            size: [[6,12px],[8,16px],[10,17px],[12,18px],[13,0px]]
                 capital:
                     filter: { country_capital: true, $zoom: { min: 5 } }
                     draw:
@@ -4027,7 +4027,7 @@ layers:
                     text-blend-order:
                         priority: 15
                         font:
-                            size: [[6,10px],[8,12px],[14,14px],[15,0px]]
+                            size: [[6,12px],[8,14px],[14,16px],[15,0px]]
                             fill: '#666'
                 capital:
                     filter: { country_capital: true, $zoom: { min: 5 } }
@@ -4052,7 +4052,7 @@ layers:
                     text-blend-order:
                         priority: 17
                         font:
-                            size: [[6,10px],[8,12px],[14,14px],[15,0px]]
+                            size: [[6,12px],[8,14px],[14,16px],[15,0px]]
                             fill: '#888'
                 capital:
                     filter: { country_capital: true, $zoom: { min: 5 } }
@@ -4077,7 +4077,7 @@ layers:
                     text-blend-order:
                         priority: 19
                         font:
-                            size: [[9,10px],[14,12px],[15,0px]]
+                            size: [[9,12px],[14,14px],[15,0px]]
                             fill: '#888'
                 capital:
                     filter: { country_capital: true, $zoom: { min: 5 } }
@@ -4104,7 +4104,7 @@ layers:
                         priority: 21
                         font:
                             fill: '#888'
-                            size: [[9, 10px],[14, 12px],[15, 0px]]
+                            size: [[9, 12px],[14, 14px],[15, 0px]]
                 capital:
                     filter: { country_capital: true, $zoom: { min: 5 } }
                     draw:
@@ -4130,7 +4130,7 @@ layers:
                         priority: 23
                         font:
                             fill: '#888'
-                            size: [[9,10px], [14,12px], [15,0px]]
+                            size: [[9,12px], [14,14px], [15,0px]]
                 capital:
                     filter: { country_capital: true, $zoom: { min: 5 } }
                     draw:
@@ -4156,7 +4156,7 @@ layers:
                         priority: 25
                         font:
                             fill: '#888'
-                            size: [[9,10px], [14,12px], [15,0px]]
+                            size: [[9,12px], [14,14px], [15,0px]]
                 capital:
                     filter: { country_capital: true, $zoom: { min: 5 } }
                     draw:
