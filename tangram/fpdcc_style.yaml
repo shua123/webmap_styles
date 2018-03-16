@@ -4973,7 +4973,7 @@ layers:
                         interactive: global.sdk_interactive
                         priority: 16
                         font:
-                            fill: global.black_color
+                            fill: '#555'
                             weight: normal
                             size: 11px
                             stroke: { color: global.white_color, width: 3 }
