@@ -3856,7 +3856,7 @@ layers:
                         visible: global.text_visible_populated_places
 
             _text_early:
-                filter: { $zoom: { max: 11 } }
+                filter: { $zoom: { max: 6 } }
                 draw:
                     text-blend-order:
                         visible: false
