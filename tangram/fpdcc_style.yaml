@@ -1257,6 +1257,7 @@ layers:
                 color: '#92DC97'
     
     fpdcc_parking_geometry:
+        filter: { $zoom: { min: 14 } }
         data: {source: fpdcc_parking_geometry}
         draw:
             polygons:
