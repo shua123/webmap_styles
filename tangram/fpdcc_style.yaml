@@ -703,17 +703,6 @@ textures:
             winery: [456, 168, 38, 38]
             zoo: [920, 84, 38, 38]
 
-    building-grid:
-        url: images/building-grid.gif
-        filtering: mipmap
-
-    parking:
-        url: https://raw.githubusercontent.com/versatilehuman/webmap_styles/master/tangram/images/parking-gray.png
-       # filtering: mipmap
-        sprites:
-            # define sprites: [x origin, y origin, width, height]
-            fpdcc-parking-icon-gray: [0, 0, 612, 612]
-
 sources:
     fpdcc_nature_preserves:
         type: GeoJSON
@@ -1223,30 +1212,7 @@ scene:
     background:
         color: '#F2F2F2'
 
-fonts:
-    Open Sans:
-        - weight: 300 # Light
-          url: fonts/OpenSans-Light.woff
-        - weight: normal # Regular
-          url: fonts/OpenSans-Regular.woff
-        - weight: normal # Regular
-          style: italic
-          url: fonts/OpenSans-Italic.woff
-        - weight: 600 # Semi Bold
-          url: fonts/OpenSans-Semibold.woff
-        - weight: 600 # Semi Bold
-          style: italic
-          url: fonts/OpenSans-SemiboldItalic.woff
-        - weight: bold
-          url: fonts/OpenSans-Bold.woff
-    Montserrat:
-        - weight: normal
-          #url: https://fonts.gstatic.com/s/montserrat/v7/zhcz-_WihjSQC0oHJ9TCYL3hpw3pgy2gAi-Ip7WPMi0.woff
-          url: fonts/Montserrat-Regular.woff
 
-scene:
-    background:
-        color: '#F2F2F2'
 layers:
     # Map overlays for styling the server response (using special source layer names) for route line, current location, and search result pins
     fpdcc_nature_preserves:
@@ -1565,6 +1531,7 @@ layers:
                 order: global.sdk_order_under_roads_0
                 color: '#8BD1E3' # colors the wave lines
     new_later:
+        data: { source: mapzen, layer: water }
         filter: { $zoom: { min: 12 } }
         draw:
             polygons:
