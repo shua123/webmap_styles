@@ -5269,7 +5269,7 @@ layers:
             draw:
                 pixel-pattern-light:
                     color: global.white_color
-                    visible: true
+                    visible: false
 
         national_forest_level_6:
             filter:
