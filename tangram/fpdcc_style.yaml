@@ -2669,7 +2669,7 @@ layers:
                             }
                         font:
                             family: Montserrat
-                            fill: '#666'
+                            fill: '#444'
                             size: [[7,7px],[12,8px],[16,11px]]
 
             default_priority_highway:
@@ -3112,7 +3112,7 @@ layers:
                             visible: global.sdk_road_shields
                             text:
                                 font:
-                                    fill: global.black_color
+                                    fill: '#444'
                                     #size: [[11,7px],[15,10px]]
                     # early:
                     #     filter: { $zoom: { max: 11 } }
