@@ -3343,7 +3343,6 @@ layers:
                 filter: { service: true }
                 draw:
                     lines:
-                        color: global.light_color
                         width: [[14,0px],[15,0.5px],[16,0.75px],[17,1px],[18,1px]]
 
     buildings:
