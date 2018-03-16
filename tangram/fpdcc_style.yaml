@@ -2157,10 +2157,10 @@ layers:
                         priority: 50
                         visible: global.text_visible_highway
                         font:
-                            fill: '#333'
+                            fill: '#FFF'
                             weight: 600
                             size: [[15, 13px], [19, 17px]]
-                            stroke: { color: global.black_color, width: [[15, 3], [17, 4]] }
+                            stroke: { color: '#555', width: [[15, 3], [17, 4]] }
 
         major_road:
             filter: { kind: major_road, $zoom: { min: 8 } }
@@ -2669,7 +2669,7 @@ layers:
                             }
                         font:
                             family: Montserrat
-                            fill: global.black_color
+                            fill: '#666'
                             size: [[7,7px],[12,8px],[16,11px]]
 
             default_priority_highway:
