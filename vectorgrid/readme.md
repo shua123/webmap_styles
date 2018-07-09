@@ -1,5 +1,7 @@
 # Developing basemap displayed with VectorGrid
 
+View at: https://shua123.github.io/webmap_styles/vectorgrid/index.html
+
 Styling is happening in the vectorstyling.js file. 
 
 VectorGrid 
