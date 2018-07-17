@@ -705,18 +705,18 @@ textures:
 sources:
     fpdcc_nature_preserves:
         type: GeoJSON
-        url: https://raw.githubusercontent.com/fpdcc/webmap_data_updates/master/basemap/FPCC-basemap-nature-preserves.geojson
+        url: https://map.fpdcc.com/basemap/FPCC-basemap-nature-preserves.geojson
         
     fpdcc_parking_icons:
         type: GeoJSON
-        url: https://raw.githubusercontent.com/fpdcc/webmap_data_updates/master/basemap/FPCC-basemap-parking-icons.geojson
+        url: https://map.fpdcc.com/basemap/FPCC-basemap-parking-icons.geojson
         
     fpdcc_parking_geometry:
         type: GeoJSON
-        url: https://raw.githubusercontent.com/fpdcc/webmap_data_updates/master/basemap/FPCC-basemap-parking-geometry.geojson
+        url: https://map.fpdcc.com/basemap/FPCC-basemap-parking-geometry.geojson
     fpdcc:
         type: GeoJSON
-        url: https://raw.githubusercontent.com/fpdcc/webmap_data_updates/master/basemap/FPCC-basemap-boundaries.geojson
+        url: https://map.fpdcc.com/basemap/FPCC-basemap-boundaries.geojson
     mapzen:
         type: MVT
         url: https://tile.nextzen.org/tilezen/vector/v1/all/{z}/{x}/{y}.mvt
